@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Photos</title>
+	<link rel="stylesheet" href="common.css">
+	<style type="text/css">
+
+		/* GENERALITIES */
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #111;
+			color: #ccc;
+		}
+		a {
+			color: #ccc;
+		}
+
+		/* MAIN */
+		.grid {
+			display: grid;
+			grid-template-rows: repeat(9, 1fr);
+			grid-template-columns: repeat(9, 1fr);
+			grid-gap: 4px;
+			width: 80vw;
+			height: 100vh;
+			margin: 0 auto;
+		}
+		.grid [class*="photo"] {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		/* row-start / col-start / row-end / col-end */
+		.grid .photo-1 {
+			grid-area: 1 / 5 / 3 / 6;
+		}
+		.grid .photo-2 {
+			grid-area: 2 / 7 / 4 / 8;
+		}
+		.grid .photo-3 {
+			grid-area: 3 / 2 / 7 / 6;
+		}
+		.grid .photo-4 {
+			grid-area: 3 / 8 / 5 / 9;
+		}
+		.grid .photo-5 {
+			grid-area: 4 / 1 / 6 / 2;
+		}
+		.grid .photo-6 {
+			grid-area: 4 / 6 / 6 / 8;
+		}
+		.grid .photo-7 {
+			grid-area: 5 / 8 / 6 / 10;
+		}
+		.grid .photo-8 {
+			grid-area: 6 / 7 / 7 / 9;
+		}
+		.grid .photo-9 {
+			grid-area: 7 / 4 / 9 / 6;
+		}
+		.grid .photo-10 {
+			grid-area: 7 / 7 / 9 / 8;
+		}
+		.grid .photo-11 {
+			grid-area: 8 / 6 / 10 / 7;
+		}
+		.grid .color-1 {
+			grid-area: 2 / 3 / 3 / 5;
+			background-color: #333;
+		}
+		.grid .color-2 {
+			grid-area: 6 / 6 / 8 / 7;
+			background-color: #666;
+		}
+		.grid .color-3 {
+			grid-area: 7 / 3 / 8 / 4;
+			background-color: #999;
+		}
+		.grid .title {
+			grid-area: 2 / 6 / 4 / 8;
+			font-size: 4em;
+			color: #fff;
+		}
+		.grid .description {
+			grid-area: 7 / 8 / 10 / 10;
+			font-size: 1.5em;
+		}
+
+		/* FOOTER */
+		.license {
+			margin: 5em;
+			text-align: center;
+		}
+		
+		@media screen and (min-width: 480px) and (max-width: 960px) {
+			.grid {
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-columns: repeat(7, 1fr);
+			}
+			.grid [class*="photo"],
+			.grid [class*="color"] {
+				grid-area: auto;
+			}
+			.grid .title {
+				grid-area: 3 / 1 / 4 / 4;
+				font-size: 4em;
+				color: #fff;
+			}
+			.grid .description {
+				grid-area: 3 / 5 / 4 / 7;
+				font-size: 1.5em;
+			}
+		}
+		
+		@media screen and (max-width: 480px) {
+			.grid {
+				grid-template-rows: repeat(4, 1fr);
+				grid-template-columns: repeat(7, 1fr);
+			}
+			.grid [class*="photo"],
+			.grid [class*="color"] {
+				grid-area: auto;
+			}
+			.grid .title {
+				grid-area: 3 / 1 / 4 / 7;
+				font-size: 4em;
+				color: #fff;
+			}
+			.grid .description {
+				grid-area: 4 / 1 / 5 / 8;
+				font-size: 1.5em;
+			}
+		}
+	</style>
+</head>
+
+
+<body>
+	<section class="grid">
+		<img class="photo-1" src="images/artem-beliaikin@4k-wallpaper-background-beautiful-853199.jpg">
+		<img class="photo-2" src="images/artem-beliaikin@abstract-art-artistic-2490925.jpg">
+		<img class="photo-3" src="images/ian-beckley@aerial-shot-bird-s-eye-view-canyon-2479904.jpg">
+		<img class="photo-4" src="images/eberhard-grossgasteiger@4k-wallpaper-autumn-clouds-2310641.jpg">
+		<img class="photo-5" src="images/eberhard-grossgasteiger@agriculture-cabin-clouds-2437291.jpg">
+		<img class="photo-6" src="images/eberhard-grossgasteiger@cold-daylight-desktop-wallpaper-1366919.jpg">
+		<img class="photo-7" src="images/ian-beckley@adventure-canyon-desert-2440080.jpg">
+		<img class="photo-8" src="images/eberhard-grossgasteiger@4k-wallpaper-alpine-alpine-flower-2310640.jpg">
+		<img class="photo-9" src="images/ian-beckley@beach-flora-flowers-2440025.jpg">
+		<img class="photo-10" src="images/ian-beckley@bright-dawn-evening-2440061.jpg">
+		<img class="photo-11" src="images/ian-beckley@cloudiness-clouds-countryside-2440016.jpg">
+		<div class="color-1"></div>
+		<div class="color-2"></div>
+		<div class="color-3"></div>
+		<h1 class="title">Expo Photos!</h1>
+		<p class="description">Du 1er au 25 juillet 2019<br>Salle des profs</p>
+	</section>
+	<footer class="license">
+		<a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">
+			<img alt="Propriété de la 3W Academy" style="border-width:0" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png" />
+		</a><br>
+		Cet exercice de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">pour l'usage personnel des étudiants, 
+		Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</a>.<br>
+		Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr" rel="cc:morePermissions">contact@3wa.fr</a>. Maquette réalisée par Stephane Pereck.
+	</footer>
+</body>
+
+</html>

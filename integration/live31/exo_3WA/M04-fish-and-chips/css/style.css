@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/fond.png");
+	font-family: 'Open Sans', sans-serif;
+	color: #454545;
+	line-height: 1.8;
+	}
+	
+ a {
+	text-decoration: none;
+}   
+
+h1, h2, h3, nav, .btn {
+	font-family: 'Slabo 27px', serif;
+	
+}
+.container {
+	margin: 0 auto;
+	max-width: 1100px;
+	min-width: 800px;
+}
+
+#menu {
+	background-color: #b6dfdd;
+	display: inline-block;
+	padding: 20px;
+	width: 68%;
+	vertical-align: top;
+}
+
+
+#menu article {
+	display: inline-block;
+	width: 50%;
+}
+ 
+aside {
+	display: inline-block;
+	padding: 20px;
+	width: 30%;
+}
+    
+
+/****************************************************
+                      FOOTER
+*****************************************************/
+footer{
+	text-align: center;
+	padding: 20px;
+}
+
+footer img {
+    width: 50px;
+}

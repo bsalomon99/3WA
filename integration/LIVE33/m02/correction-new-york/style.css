@@ -1,0 +1,25 @@
+body {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #3D3838;
+	font-family: sans-serif;
+	font-weight: 100;
+	line-height: 21px;
+	background-color: #eee;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+h2 {
+	padding: 10px;
+	text-transform: capitalize;
+	background-color:#fff;
+	border-bottom:solid 3px #ccc;
+}
+p {
+	font-size:14px;
+	line-height: 21px;
+	text-align: justify;
+}

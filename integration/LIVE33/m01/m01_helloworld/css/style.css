@@ -1,0 +1,13 @@
+body {
+    font-family: serif;
+}
+footer {
+    text-align: center;
+}
+footer img {
+    width: 50px;
+}
+span {
+    font-weight : bold;
+    font-size: 1.2em;
+}

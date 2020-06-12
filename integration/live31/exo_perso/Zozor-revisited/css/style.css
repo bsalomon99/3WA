@@ -1,0 +1,161 @@
+
+
+@font-face {
+    font-family: "Caveat";
+    src: url(../fonts/Caveat-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url(../fonts/Caveat-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: "dayrom";
+    src: url(../fonts/dayrom.svg) format("svg");
+    
+}
+
+@font-face {
+    font-family: "ballpark";
+    src: url(../fonts/ballpark.svg) format("svg");
+    
+}
+body {
+	margin: auto;
+	width: 90%;
+	background-image: url(../img/fond_jaune.png);
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	background: url(../img/separateur.png) repeat-x bottom;
+	
+	
+	
+}
+#logo {
+	display:flex;
+	align-items: baseline;
+	border: 1px solid green;
+	
+}
+#logo img {
+	width: 50px;
+	height: 50px;
+}
+header h1 {
+	margin-left: 10px;
+	
+}
+header h2 {
+	margin-top: 0;
+	
+}
+nav {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	border: 1px solid red;
+	width: 30%;
+	padding-bottom: 15px;
+	font-size: 1.5em;
+}
+ nav a:hover {
+ 	color: red;
+ 	border-bottom: 5px solid red;
+ }
+
+a {
+	text-decoration: none;
+}
+nav a {
+	color: black;
+}
+#photo_intro {
+	background-image: url(../img/sanfrancisco.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 7px;
+	height: 300px;
+	color: white;
+	
+}
+.legend {
+	position: relative;
+	top: 249px;
+	background-color: rgba(255, 0, 0, 0.5);
+	padding: 10px;
+}
+.btn {
+	float: right;
+	position: relative;
+	right: 10px;
+	bottom: 1.5px;
+	background-color: darkred;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid #760001;
+}
+
+.principal {
+	display: flex;
+	margin-bottom: 15px;
+}
+	
+	
+.principal p {
+	text-align: justify;
+	
+}
+article {
+	flex: 3;
+	margin-right: 15px;
+}
+aside {
+	flex: 1;
+	text-align: center;
+	padding: 0 15px 0 15px;
+	margin-top: 15px;
+	position: relative;
+	background-color: grey;
+	border-radius: 10px;
+	color: white;
+	
+}
+h1 {
+	text-transform: uppercase;
+	font-family: Dayrom, serif;
+}	
+
+
+img[alt="flechegauche"] {
+	position: absolute;
+	left: -20px;
+	top: 130px;
+}
+
+aside img {
+	padding: 10px;
+	
+}
+
+footer {
+	display: flex;
+	background: url(../img/separateur.png) repeat-x top, url(../img/ico_top.png) no-repeat top center;
+}
+
+footer section {
+	flex: 1;
+}
+.friends {
+	display: flex;
+}
+ul li {
+	list-style-image: url(../img/ico_liensexterne.png);
+}

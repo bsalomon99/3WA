@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXE1gcmb7cBwUu7JWICY-ct5OUKtXOHPY1PEr0HGXZYCnmBdXe&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+h1 {
+    text-shadow: 0.2em 0.5em 0.1em #600;
+}

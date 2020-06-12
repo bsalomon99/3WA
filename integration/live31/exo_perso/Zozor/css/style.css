@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url(../fonts/Caveat-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url(../fonts/Caveat-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: "dayrom";
+    src: url(../fonts/dayrom.svg) format("svg");
+    
+}
+
+@font-face {
+    font-family: "ballpark";
+    src: url(../fonts/ballpark.svg) format("svg");
+    
+}
+body {
+	margin: auto;
+	width: 90%;
+	background-image: url(../img/fond_jaune.png);
+	font-family: "Trebuchet MS", sans-serif;
+}
+header {
+    border: 1px solid green;
+	display: flex;
+}
+.top {
+	flex: 1;
+	border: 1px solid blue;
+}
+
+nav {
+	display: flex;
+	font-size: 25px;
+	font-weight: bold;	
+	}
+nav p {
+	margin-top: 150px;
+	
+}	
+	
+/* positionner la nav en bas du header: j'ai mis margin-top: 200px. La position relatve ci-dessous fonctionne aussi :
+nav p {
+	position: relative;
+	top: 150px;
+	
+}*/
+nav p a {
+	padding: 50px;
+	border: 1px solid red;
+	text-transform: uppercase;
+	
+	font-size: 1em;
+	
+}	
+ a {
+	text-decoration: none;
+}
+a.first {
+	color: red;
+}	
+.principal {
+	display: flex;
+	
+	
+}
+.sous {
+	padding: 10px;
+}	
+.principal p {
+	text-align: justify;
+	
+}	
+h1, h2 {
+	text-transform: uppercase;
+	font-family: Dayrom, serif;
+}	
+h1 {
+font-size: 30px;
+}
+aside {
+	background-color: grey;
+	border-radius: 10px;
+	color: white;
+	width: 60%;
+	text-align: center;
+}
+
+footer {
+	display: flex;
+}
+footer section {
+	flex: 1;
+}
+.friends {
+	display: flex;
+}
+ul li {
+	list-style-image: url(../img/ico_liensexterne.png);
+}

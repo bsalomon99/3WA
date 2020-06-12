@@ -1,0 +1,74 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+
+/* FOOTER */
+/*      Ce qui concerne le footer */
+body {
+    background-image: url(../img/fond.png);
+}
+h2, nav {
+    font-family: 'Oswald', sans-serif;
+}
+nav {
+    float: right;
+    font-size: 1.3em;
+    width: 50%;
+    margin: 50px 0 ;
+  
+}
+nav a {
+    color: black;
+    padding-right: 40px;
+}
+header, main {
+    max-width: 750px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    
+}
+header {
+    background-color: #b8cb21;
+}
+h2 {
+    color: #b8cb21;
+}
+section img {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+footer img {
+    width: 50px;
+}
+ul li {
+    padding-left: 25px;
+}
+button a {
+    text-decoration: none;
+    color: white;
+    
+}
+button {
+    background-color: #b8cb21;
+    padding: 10px;
+    border: none;
+    float: right;
+}
+.clear {
+    clear: both;
+}

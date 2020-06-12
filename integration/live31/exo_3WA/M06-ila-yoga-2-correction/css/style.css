@@ -1,0 +1,236 @@
+/*GLOBAL */
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+@font-face {
+	font-family: "Kaushan Script";
+	src: url(../fonts/KaushanScript-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	color: #34495e;
+	font-family: "Playfair Display", serif;
+	font-size: 1em;
+	line-height: 1.8;
+	margin: 0;	
+}
+
+a {
+	color: #8a62c2;
+	text-decoration: none;
+}
+
+h1, h2, h3, .presentation {
+	font-weight: normal;
+	text-align: center;
+}
+
+.overflow-h {
+	overflow: hidden;
+}
+
+.left {
+	float: left;
+	margin-right: 25px;
+}
+
+.right {
+	float: right;
+	margin-left: 25px;
+}
+
+/* NAV */
+nav {
+	background-color: rgba(255,255,255,0.3);
+	padding: 25px;
+	text-align: center;
+}
+
+nav a {
+	color: white;
+	display: inline-block;
+	font-family: "Kaushan Script";
+	font-size: 1.5em;
+	margin: 0 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav a .far,  nav a .fas{
+	display: block;
+}
+
+/* HEADER */
+header {
+	background-image: url(../img/fond.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.promo {
+	background-color: rgba(255,255,255,0.15);
+	color: white;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+}
+
+.presentation {
+	color: white;
+	font-family: "Kaushan Script";
+	font-size: 2em;
+	padding: 50px 0 300px;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* MAIN PAGE INDEX */
+.about {
+	padding: 0 50px 50px;
+}
+
+hr {
+	background-color: #eacee4;
+	border: 0;
+	height: 1px;
+	margin: 50px;
+}
+
+.description {
+	background-color: #8a62c2;
+	background-image: url(../img/background_section.jpg);
+	background-position: left bottom;
+	background-size: cover;
+	color: white;
+	line-height: 2;
+}
+
+.description > h2{
+	font-size: 2em;
+}
+
+.description article {
+	display: inline-block;
+	padding: 0 60px 60px;
+	text-align: center;
+	width: 33.333%;
+}
+
+.description img {
+	width: 200px;
+}
+
+iframe {
+	border: 0;
+	display: block;
+	height: 450px;
+	width: 100%;
+}
+
+/* MAIN PAGE CONTACT */
+/*tableaux*/
+table {
+	width: 90%;
+	border-collapse: collapse;
+	margin: 0 auto 25px;
+}
+
+table thead {
+	font-family: "Kaushan Script";
+	font-weight: normal;
+	font-size: 1.6em;
+	background-color: #c4a9df;
+	border: 1px solid #c4a9df;
+	color: white;
+	padding: 10px;
+}
+
+table tbody tr:nth-child(even) { /*Pour un background une ligne sur deux, plutot que de rajouter une class, nous pouvons ajouter une pseudo-class*/
+	background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #fafafa;
+}
+table th {
+	text-align: left;
+	font-weight: normal;
+	padding: 10px 25px;
+}
+
+table tr td {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+table tr td:first-child {
+	text-align: left;
+}
+
+/*formulaire*/
+#info legend {
+	font-size: 1.5em;
+	padding: 0 15px;
+}
+
+#info form {
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#info fieldset {
+	margin: 25px 0;
+	padding:25px 20px;
+	border: 1px solid #dedede;
+}
+
+#info input[type="text"], 
+#info input[type="email"]{  /*ici on utilise un sélecteur d'attribut qui vise uniquement les inputs de type text et mail*/
+	border: 0;
+	border-bottom: 1px solid #dedede;
+	background-color: white;
+	padding: 5px;
+}
+
+#info label {
+	margin-left: 25px;
+}
+
+#info select {
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin: 20px;
+	width: 95%;
+}
+
+#info button {
+	background-color: #8a62c2;
+	color: white;
+	padding: 10px 25px;
+	border: 0;
+	margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+	background-color: #8b76d2;
+	color: white;
+	font-size: 0.9em;
+	padding: 10px;
+	text-align: center;
+}
+
+footer img {
+    width: 50px;
+}
+
+footer a {
+	color: #ffffff;
+	text-decoration: underline;
+}

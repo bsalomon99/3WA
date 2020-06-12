@@ -1,0 +1,58 @@
+/*Largeur du site : 600px
+Graisse du texte : 100
+
+Interlignage : 21px
+Police de caractère : Helvetica
+Couleur de fond : #eee
+Couleur et épaisseur de trait sous le titre : 3px et #ccc
+
+En bonus:
+
+Faire une seconde page avec un carte Google Maps de New york.
+Ajouter un lien sur chacune des pages pour passer d'une page à l'autre
+Ajouter les liens sur le sommaire et les ancres correspondantes
+Ajouter un lie externe "Pour plus d'informations" pointant vers le site de New York. Ouvrir le lien dans une nouvelle fenêtre.*/
+
+body {
+    font-family: Helvetica;
+    font-weight: 100;
+    font-size: 14px;
+    background-color: #eee;
+    width: 600px;
+    text-align: justify;
+    margin: auto;
+    line-height: 21px;
+}
+.clear {
+    clear: both;
+}
+
+h2 {
+    background-color: white;
+    padding: 5px;
+    border-bottom: 3px solid lightgrey;
+    
+}
+button {
+    float: right;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    
+}
+button a {
+    background-color: lightgrey;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+#btn {
+    float: right;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 6px;
+    background-color: lightgrey;
+    
+}

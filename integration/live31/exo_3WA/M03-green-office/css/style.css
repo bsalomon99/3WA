@@ -1,0 +1,78 @@
+/****************GLOBAL*****************/
+
+body {
+    background-image: url(../img/fond.png);
+    font-family: Vardana, sans-serif;
+    color: #666;
+    margin: 0;
+    }
+    
+ header, main {
+     max-width: 750px;
+     margin: 0 auto;
+     padding: 25px;
+ }
+
+.clear {
+    clear: both;
+}
+
+/*******************HEADER***************/
+   
+header {
+    background-color: #b8cb21;
+}
+
+header nav {
+    float: right;
+    
+    padding: 50px 0;
+}
+header nav a {  
+    text-decoration: none;
+    color:  #2c4726;
+    font-family: "Oswald",sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding: 20px;
+    
+    } 
+
+    
+
+/*******************MAIN***************/
+
+main {
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline double;
+}
+h1, h2, h3 {
+    font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+    color: #b8cb21 ;
+}
+main article a.btn {
+    float: right;
+    background-color: #b8cb21;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+main article img {
+    width: 30%;
+    float: left;
+    padding: 5px;
+}
+
+/*******************FOOTER***************/
+footer {
+    text-align: center;
+    padding: 20px;
+}
+footer img {
+    font-size: 1em;
+    width: 50px;
+}

@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Candal|Open+Sans:400,400i,700&display=swap');
+
+
+
+/****************************************************
+                      GLOBAL
+*****************************************************/
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #666;
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: all .2s ease 0s;
+}
+
+h1,
+h2,
+h3,
+nav,
+.opening,
+.btn,
+.prix {
+    font-weight: normal;
+    font-family: 'Candal', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+/****************************************************
+                        HEADER
+*****************************************************/
+header {
+    background-color: #fcfcfc;
+}
+
+/* ============ nav ============ */
+header nav {
+    padding: 25px 0;
+}
+header nav img {
+    margin-bottom:25px;
+}
+header nav a {
+    color: #203e4d;
+    font-size: 2.2rem;
+    margin:15px 0;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #fb8a9b;
+}
+
+header #nav a i {
+    color: #fb8a9b;
+    display: block;
+    font-size: 3.3rem;
+}
+
+header #nav a:hover i,
+header #nav a.active i {
+    color: #203e4d;
+}
+
+
+/* ============ Section Opening ==============*/
+
+#home .opening {    
+    background: url("../img/background.jpg") #203e4d center;
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+#home .opening h1 {
+    font-size: 4.8rem;
+}
+
+#home .opening p {
+    font-size: 3.2rem;
+}
+
+
+
+
+/* ============ SEARCH FORM ============ */
+.search-form {
+    background-color: #fb8a9b;
+}
+
+.search-form input {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    padding: 25px 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.4rem;
+    display: block;
+    width: 100%;
+}
+
+.search-form input::placeholder {
+    /*ATTENTION la pseudo-class ::placeholder n'est actuellement pas supportée par IE*/
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.4rem;
+}
+
+
+/****************************************************
+                    MAIN
+*****************************************************/
+
+
+/* ============ GLOBAL ==============*/
+
+
+main p {
+    text-align: justify;
+}
+
+#home h2,
+#page h1{
+    color: #203e4d;
+    border: 1px dashed #203e4d;
+    border-bottom: 0;
+    font-size: 3rem;
+    margin-top: 50px;
+    padding: 25px 0;
+}
+
+
+/* ============ INDEX ==============*/
+
+/* Section Solution et hébergement*/
+#home article {
+    padding: 30px;
+}
+
+#home article h3 {
+    font-size: 2rem;
+    color: #fb8a9b;
+    padding: 10px 0 0;
+}
+
+#home article i {
+    display: block;
+    font-size: 4.8rem;
+    color: #fb8a9b;
+    margin: 25px 0 0;
+}
+
+
+#home #hebergement article h3+p {
+    color: #fb8a9b;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* ============ PAGES COMMUNES ==============*/
+
+/*MAIN SERVEURS ET CLOUD*/
+/*sections : mutualise, dedie, cloud*/
+
+
+#page h1+p {
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+#page div.flex:hover article {
+    opacity: 0.65;
+}
+
+#page div.flex article:hover {
+    opacity: 1;
+}
+
+#page article {
+    border: 1px dashed #203e4d;
+    margin-bottom: 50px;
+    padding: 0 15px 15px;
+}
+
+#page article h2 {
+    background-color: #203e4d;
+    color: #fff;
+    font-size: 2rem;
+    padding: 25px;
+}
+
+#page article ul li {
+    font-size: 1.5rem;
+    margin: 10px 0 10px 30px;
+    list-style-type: circle;
+    text-align: left;
+}
+
+#page article .prix{
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#page article .btn {
+    background-color: #fb8a9b;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+
+
+
+/* ============ CONTACT ==============*/
+#contact .flex div {
+    margin: 25px;
+}
+
+#contact  .flex div p {
+    text-align: center;
+}
+#contact .flex div i {
+    display: block;
+    border-bottom: 1px dashed #fb8a9b;
+    color: #fb8a9b;
+    font-size: 4.8rem;
+    padding-bottom: 25px;
+}
+
+#contact .flex div a {
+    color: #fb8a9b;
+}
+
+#contact address {
+    margin-top: 16px;
+}
+
+
+#page iframe {
+    border: 0;
+    display: block;
+    height: 500px;
+    width: 100%;
+    margin-top:15px;
+}
+
+
+
+
+
+/****************************************************
+                    FOOTER
+*****************************************************/
+footer {
+    background-color: #203e4d;
+    color: #ccc;
+    padding: 50px 0;
+}
+
+footer a {
+    color: white;
+    padding: 15px 0;
+}
+
+footer p.container {
+    margin: 45px auto 0;
+} 
+
+footer img {
+    width: 50px;
+}
+
+
+
+
+/*=======================================================
+                    MEDIA QUERIES
+=========================================================*/
+
+
+/*========================= DESKTOP ======================*/
+
+
+@media screen and (min-width: 1025px) {
+
+/* ============ GLOBAL ==============*/
+    .flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav.flex {
+        align-items: center;
+    }
+  
+
+ 
+/* ============ HEADER ==============*/
+
+    /*SEARCH FORM*/
+    .search-form input {
+        padding: 25px 0;
+    }
+
+
+/* ============ MAIN ==============*/
+
+    /*MAIN INDEX*/
+    #home .opening {
+        padding: 200px 0;
+    }
+
+
+    /*MAIN PAGE*/
+    #page article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    /*MAIN PAGE ET CONTACT */
+    #page article,
+    #contact .flex div {
+        flex-basis: 32%;
+    }
+
+
+}

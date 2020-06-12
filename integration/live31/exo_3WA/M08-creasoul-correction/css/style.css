@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Narrow&display=swap');
+
+/*********  VERSION MOBILE par défaut (FIRST MOBILE) ***********/
+
+
+/****************************************************
+                      GLOBAL
+*****************************************************/
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	/*astuce qui consiste à transformer 1rem (ou em) = 10px au lieu de 1rem (ou em) = 16px (par défaut). Ceci facilite le calcul de conversion. Ex : 15px = 1.5rem (au lieu de 0.938rem ou em), 9px = 0.9rem (au lieu de 0.563rem ou em)*/
+	font-size: 62.5%; 
+}
+
+body {
+	background: #f2f1f4;
+	color: #6a6d70;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 1.6rem; /*donc ici grâce à l'astuce cela est égale à 16px*/
+	line-height: 1.8;
+	margin: 0;
+}
+
+a { /*définit tous les liens par défaut*/
+	color: #49b2b4;
+	text-decoration: none;
+}
+
+/*propriété global des titres*/
+h1, 
+h2 {
+	color: #30a894;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;	
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	border-bottom: 1px solid #30a894;
+	font-size: 2.4rem;
+	margin: 0;
+}
+
+p { /*propriété global des paragraphes*/
+	margin: 15px 0;
+}
+
+.container { /*propriété global de la classe container*/
+	margin: 25px;
+}
+
+
+/****************************************************
+                      HEADER
+*****************************************************/
+header {
+	text-align: center;
+}
+
+.flex-nav{
+	display: flex;
+	flex-direction: column;
+}
+
+header nav {
+	background-color: #30a894;
+}
+
+header nav a {
+	font-family: "PT Sans Narrow", sans-serif;
+	padding: 25px;
+	font-size: 1.6em;
+	color: white;
+}
+
+header nav a:hover {
+	background-color: #38b5a0;
+}
+
+
+/****************************************************
+                      MAIN
+*****************************************************/
+main section.articles img {
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+main aside {
+	display: none;
+}
+
+/****************************************************
+                      FOOTER
+*****************************************************/
+footer {
+    text-align: center;
+    padding: 25px;
+}
+
+footer img {
+    width: 50px;
+}
+
+
+/*===================================================
+                  VERSION TABLETTE
+===================================================*/
+
+@media screen and (min-width: 768px) {
+	main aside {
+		display: block;
+		padding: 25px;
+	}
+
+	main aside {
+		padding: 25px;
+		background-color: #b8dcb1;
+		color: #314C35;
+	}
+}
+
+/*===================================================
+                  VERSION DESKTOP
+===================================================*/
+
+@media screen and (min-width:1025px) {
+	.container {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	/*deux classes flex, une pour positionner les balises <a> de la nav, l'autre pour positionner la section et le aside */
+	.flex-nav{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.flex-section-aside{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header nav a{
+		/* 
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		 */
+		flex: 1 1 auto; /*calcul la surface d'occupation des items de façon égale. Ici cela revient à faire un flexbasis:33.333%*/
+		
+		/*OU*/
+		/* flex-basis: 33.333%; */
+	}
+
+	main section.articles {
+		flex-basis: 70%;
+		padding: 25px 25px 25px 0;
+	}
+
+	main aside {
+		flex-basis: 30%;
+	}
+}

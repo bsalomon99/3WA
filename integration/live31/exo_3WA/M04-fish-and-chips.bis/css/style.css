@@ -1,0 +1,183 @@
+/****************************************************
+                      GLOBAL
+*****************************************************/
+*{
+		box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/fond.png");
+	color: #424953;
+	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 1.8;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, nav, .btn {
+	font-family: "Slabo 27px";
+	font-weight: normal;
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1100px;
+	min-width: 800px;
+}
+
+
+/****************************************************
+                      HEADER
+*****************************************************/
+header {
+	background-color: #25b3b4;
+	border-bottom: 5px solid #1b9ca2;
+	border-top: 5px solid #1b9ca2;
+	margin-top: 100px;
+	text-align: center;
+}
+
+header nav {
+	margin:15px;
+	font-size: 1.4em;
+}
+
+header nav a {
+	color: white;
+	padding: 15px;
+}
+
+
+/****************************************************
+                      MAIN
+*****************************************************/
+
+
+/*----- Section Présentation -----*/
+#presentation {
+	margin: 50px auto;
+	text-align: center;
+	padding: 0 50px;
+}
+
+#presentation  h1 {
+	font-size: 2.5em;
+	text-align: center;
+}
+
+
+#menu {
+	background-color: #b6dfdd;
+	display: inline-block;/*---pour mettre Today's Special (menu) et News&Events (aside) côte à côte---
+	width mandatory. Here it relates to the width of the elt on the left hand side, i.e. Today's Special (menu)-*/
+	margin-right: 2%; 
+	padding: 20px;
+	vertical-align: top;
+	width: 66%;
+}
+
+#menu h2 {
+	font-size: 3.5em;
+	text-align: center;
+}
+
+#menu h2 span {
+	color: #1b9ca2;
+}
+
+/*------------ARTICLE-------------*/
+
+#menu article {
+	display: inline-block;/*---pour mettre les 2 articles de Today's Special (menu) côte à côte//width is mandatroy----*/
+	padding: 20px;
+	vertical-align: top;
+	width: 50%;
+	overflow: hidden;
+	text-align: justify;
+}
+
+#menu article h3 {
+	font-size: 1.8em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#menu article h3 i {
+	color: #25b3b4;
+	font-size: 0.8em;
+	margin: 0 5px;
+}
+
+#menu article img {
+	border-radius: 50%;
+	float: left;
+	margin-right: 15px;
+}
+
+#menu article p:nth-of-type(1) {
+	margin-top:0;
+}
+
+#menu article .btn {
+	background-color: #1b9ca2;
+	color: white;
+	font-size: 1.1em;
+	float: right;
+	margin-top: 15px;
+	padding: 5px 15px;
+}
+
+#menu article .btn i {
+	margin-left: 10px;
+}
+
+
+
+
+aside {
+	background-color: #25b3b4;
+	border: 5px solid #1b9ca2;
+	color: white;
+	display: inline-block;
+	padding: 20px;
+	width: 30%;
+}
+
+
+aside #vignette {
+	float: right;
+	margin: -75px -75px 0 0;
+}
+
+
+
+
+aside h2 {
+	font-size: 1.4em;
+}
+
+aside span,
+aside a {
+	color: #B6DFDD;
+}
+
+aside p {
+	font-size: 0.9em;
+	margin: 0 0 15px;
+}
+
+
+/****************************************************
+                      FOOTER
+*****************************************************/
+footer {
+    padding: 25px;
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+}

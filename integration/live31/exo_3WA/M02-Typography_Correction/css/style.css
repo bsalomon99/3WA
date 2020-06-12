@@ -1,0 +1,124 @@
+
+/* @FONT-FACE = Déclaration de police */
+@font-face {
+    font-family: "Blacksword";
+    src: url(../fonts/Blacksword.otf);
+    /* ici font-weight et font-style pas nécessaires car valeur par défaut */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Quand une police possède plusieurs styles (normal, gras, italique), on déclare chaque fichier avec le même nom (font-family) et on précise si il s'agit d'un fichier avec une fonte en italic (font-style: italic) ou en gras (font-weight: bold) */
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-regular.woff) format("woff");
+} 
+
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-italic.woff) format("woff");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-bold.woff) format("woff");
+    font-weight: bold;
+}
+
+ 
+/****************************************************
+                      GLOBAL
+*****************************************************/
+
+body {
+    background-image: url("../img/bunting.png");
+    background-repeat: repeat-x;
+    background-color: #fbfaf4;
+    color: #555;
+    font-family: "Cardo", serif;
+    font-size: 1.4em;
+    line-height: 2.2;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 50%;
+}
+
+
+/*la virgule est le sélecteur "ET". Dans notre exemple cela se traduit par h1 et h2 et h3 auront les mêmes propriétés CSS font-family et font-weight */
+h1, h2, h3 { 
+    font-family: "Blacksword", sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5em;
+    margin: 50px 0 0;
+    word-spacing: 25px;
+}
+
+h3{
+    font-size: 1.5em;
+    margin: 50px 0 0;
+    word-spacing: 10px;
+}
+
+a {
+    color: #f2a1b1;
+    text-decoration: none;
+}
+
+p {
+    margin-top:0;
+    text-align: justify;
+    text-indent: 25px;
+}
+/****************************************************
+                      HEADER
+*****************************************************/
+
+
+
+/****************************************************
+                      MAIN
+*****************************************************/
+/* CITATIONS */
+q {
+    color: #666;
+    display: block;
+    font-size: 1.6em;
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: 100px;
+    text-align: center;
+}
+
+cite {
+    display: block;
+    margin-bottom: 3em;
+    text-align: right;
+}
+
+
+/****************************************************
+                     FOOTER
+*****************************************************/
+footer {    
+    padding: 25px;
+}
+
+footer img {
+    width: 50px;
+}
+
+footer p{
+    line-height: 1.2;
+    text-align: center;
+    text-indent: 0;
+}

@@ -1,0 +1,139 @@
+<!-- DOCTYPE => indique au navigateur que le type du document est du HTML5 -->
+<!DOCTYPE html> 
+
+
+<!-- lang="fr" est un attribut qui a pour but de préciser le langage de la page (fr = Français, en = anglais, ...) -->
+<html lang="fr"> 
+
+  <!-- HEAD => la tête , c'est les informations dont le navigateur a besoin pour afficher correctement la page -->
+	<head> 
+		<!-- META CHARSET => c'est l'encodage de la page, sans UTF-8 les accents ne seront pas interprétés. / c'est une balise auto-fermante -->
+		<meta charset="utf-8"> 
+		
+    	<!-- TITLE => c'est le titre qui s'affiche dans l'onglet du navigateur - important pour le SEO -->
+		<title>Hello World - 3WA.fr</title>
+		
+		<!-- LINK => permet de relier le CSS au HTML --> 
+		<link href="css/style.css" rel="stylesheet"> 
+	</head> 
+	
+
+  	<!-- BODY (structurante) => le corps, c'est ce qui va apparaître dans le navigateur -->
+	<body> 
+
+		<!-- HEADER (structurante) => c'est l'entête de la page, c'est ce qui est commun à toutes les pages   -->
+		<header> 
+      		<!-- H1 (contenu) => On ne met qu'un seul H1 par page (recommandé par W3C) C'est le titre principal de la page -->
+			<h1>Hello World ! Bienvenue à la 3WA !</h1>
+
+			<!-- NAV (structurante) => (navigation) représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. -->
+			<nav>
+        		<!-- A (contenu) => lien. L'attribut HREF : indique la cible du lien (ici c'est un lien d'ancrage) -->
+				<a href="#integration">L'intégration</a>
+				<a href="#developpement">Le développement</a>
+				<a href="#formation">La répartition des modules</a>
+				<a href="#jouons">Jouons avec le CSS !</a>
+			</nav>
+		</header> 
+		
+    	<!-- MAIN (structurante) => c'est le principal de la page, /!\ il ne peut y en avoir qu'un seul par page /!\   -->
+		<main> 
+			
+      		<!-- H2 (contenu) => titre pouvant aller du h1 au h6 -->
+			<h2>Au cours de cette formation nous allons avoir 2 matières :</h2>
+
+			<h3 id="integration">L'intégration</h3>
+
+			<h4>Le HTML :</h4>
+			
+        	<!-- IMG => pour afficher une image. L'attribut ALT de l'image : le texte s'affichera si l'image ne peut être afficher et sera utile pour le SEO -->
+			<img src="img/html.png" alt="Le logo du HTML" />
+			
+      		<!-- P (contenu) => paragraphe - contenant des blocs de texte -->
+			<p>
+				Le HTML sert à créer le contenu du site : elle va contenir uniquement la partie textuelle du site.
+			</p>
+			
+			<h4>Le CSS :</h4>
+			<img src="img/css.jpg" alt="Le logo du CSS" />
+			<p>
+				Le CSS va nous permettre d'ajouter la couche graphique à notre site : les couleurs, les formes, le fond...
+			</p>
+
+
+			<!-- ======================================================================================= -->
+
+			<hr>
+
+			<h3 id="developpement">Le développement</h3>
+		
+			<h4>Le Javascript :</h4>
+			<img src="img/js.png" alt="Le logo du JavaScript">
+			<p>
+				Javascript est un langage de programmation de script employé pour rendre une page web interactive, le comportement de la page et son apparence pourra varier en fonction de certains paramètres.
+			</p>
+			
+			<h4>Le PHP :</h4>
+			<img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0015/1781/brand.gif" alt="Le logo du PHP">
+			<p>
+				Le PHP est un langage de programmation libre, utilisé pour généré des pages web dynamiques, qui sont donc modifiés en fonction de certaines informations (heure, nom de l'utilisateur, formulaire rempli par l'utilisateur etc).
+			</p>
+			
+			<h4>MySQL :</h4>
+			<img src="http://www.softaculous.com/website/images/ampps/mysql.png" alt="le logo de MySQL">
+			<p>
+				MySQL est un système de gestion de bases de données, il permet d'enregistrer des informations rempli par l'utilisateur (exemple : formulaire de création de compte) pour ensuite être ré-utilisé au moment approprié (ex: connexion à un site internet avec identifiant et mot de passe).
+			</p>
+			
+
+			<!-- ======================================================================================= -->
+			
+			<hr>
+			
+			<h2 id="formation">400 heures de formation intensive :</h2>
+			<p>Le programme de formation de la 3W Academy est découpé en 57 modules.</p>
+
+			
+        	<!--  UL (structurante) - Pour créer une liste à puces. /!\ ne peut avoir que des LI en enfants directs -->
+			<ul>
+				<!--  LI (contenu) - Item (enfant) d'une liste ordonnée (OL) ou à puce (UL). -->
+				<li>HTML, CSS, Responsive web design, Wordpress, Bootstrap : 16 modules</li>
+				<li>Javascript : 12 modules</li>
+				<li>PHP, MySQL, POO, MVC : 25 modules</li>
+				<li>Symfony : 4 modules</li>
+			</ul>
+			
+			<!-- ======================================================================================= -->
+
+
+			<hr>
+
+			
+			<h2  id="jouons">Et ici, nous allons un peu jouer avec le CSS !</h2>
+			
+			<h3>Les couleurs du texte : <span>Et ma police sera Arial !</span></h3>
+			<p class="red arial">Ce paragraphe est rouge.</p>
+			<p class="blue arial">Ce paragraphe est bleu.</p>
+			<p class="green arial">Ce paragraphe est vert.</p>
+			
+			<h3>Les couleurs de fond : <span>Et ma police sera monospace !</span></h3>
+			<p class="bg-red monospace">Ce fond de paragraphe est rouge.</p>
+			<p class="bg-blue monospace">Ce fond de paragraphe est bleu.</p>
+			<p class="bg-green monospace">Ce fond de paragraphe est vert.</p>
+		
+		</main> 
+		
+    	<!-- FOOTER (structurante) => c'est pied de page, c'est ce qui est commun à toutes les pages   -->
+		<footer> 
+			<a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">
+				<img src="img/3wa.png" alt="Logo de la 3WAcademy">
+			</a>
+			<p>
+				<!-- SMALL (contenu) => utilisé pour les légendes ou les copyrights...   -->
+				<small>
+					Cet exercice de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</a>.<br />Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr" rel="cc:morePermissions">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="http://www.justine-muller.fr">Justine Muller</a>.
+				</small>
+			</p>
+		</footer> 
+	</body> 
+</html>

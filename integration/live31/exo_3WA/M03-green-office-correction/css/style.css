@@ -1,0 +1,106 @@
+/****************************************************
+                      GLOBAL
+*****************************************************/
+
+body {
+	background-image: url(../img/fond.png);
+	color: #666;
+	font-family: verdana, sans-serif;
+	margin: 0;	
+}
+
+header, main {
+	margin: 0 auto;
+	max-width: 750px;
+	padding: 25px;
+}
+
+.clear {
+	 /*permet d'arrêter l'influence du float sur les élement HTML suivant */
+	 clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/****************************************************
+                      HEADER
+*****************************************************/
+
+
+header{
+	background-color: #b8cb21;
+}
+
+header nav{
+	float: right;
+	padding: 50px 0;
+}
+
+header nav a {
+	color: #2c4726;
+	font-family: "Oswald", sans-serif;
+	font-size: 1.3em;
+	margin: 15px;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+
+
+/****************************************************
+                      MAIN
+*****************************************************/
+main {
+	background-color: white;
+}
+
+main h1, main h2 {
+	color: #b8cb21;
+	font-family: "Oswald", sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+main h1 {
+	text-align: center;
+	text-decoration: underline double;
+}
+
+/* Autre solution pour stopper le float, se met à la place du clear 
+main article{
+	overflow: hidden; 
+}*/
+
+main article img {
+	float: left;
+    margin: 0 10px 10px 0;
+    width: 200px;
+    border: 1px solid #CCC;
+    padding: 5px;
+}
+
+
+main article a.btn {
+	background-color: #b8cb21;
+	color: white;
+	float: right;
+	padding: 10px;
+	text-decoration: none;
+}
+
+
+/****************************************************
+                      FOOTER
+*****************************************************/
+footer{
+	text-align: center;
+	padding: 20px;
+}
+
+footer img {
+    width: 50px;
+}

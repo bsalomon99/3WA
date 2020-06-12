@@ -1,0 +1,176 @@
+
+/****************************************************
+                      GLOBAL
+*****************************************************/
+*{
+	/* Explication : https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing*/
+	box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+    background-color: #EEE;
+}
+
+header nav,
+main  {
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+header, 
+footer{
+    background-color: #308383;
+    text-align: center;
+    color:#FFF;
+    padding:10px;
+}
+
+
+
+h1 {
+    text-align:center;
+    color: red;
+}
+
+a{
+    color:#308383;
+}
+
+/****************************************************
+                      HEADER
+*****************************************************/
+
+
+header img{
+    width: 150px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a{
+    color: #fff;
+    margin: 5px 15px;
+    padding:5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header nav a:nth-child(3n) {
+    border-left: 5px solid #f42837;
+    padding-left:10px;
+}
+
+header nav a:nth-child(3n+1) {
+    border-left: 5px solid #224444;
+    padding-left:10px;
+}
+header nav a:nth-child(3n+2) {
+    border-left: 5px solid #ccc;
+    padding-left:10px;
+}
+header nav a:first-child{
+    background-color: #2d6666;
+}
+
+header nav a:hover{
+    background-color: #224444;
+}
+
+
+/****************************************************
+                      MAIN
+*****************************************************/
+main h2 {
+    color:#224444;
+    border-left: 5px solid #224444;
+    padding-left:10px;
+}
+
+
+/* Section idées */
+main section:first-of-type h2 {
+    margin-top:50px;
+}
+
+main section:first-of-type > img {
+    width:100%;
+}
+
+/* Articles */
+main section:first-of-type article {
+    overflow: hidden;
+}
+main section:first-of-type article img {
+    width:350px;
+    float:left;
+    margin:0 20px 0 0;
+}
+main section:first-of-type article:last-of-type img {
+    float:right;
+    margin:0 0 0 20px;
+}
+
+
+
+
+
+/* ventes */
+main section:last-of-type table{
+    border-spacing: 10px;
+    width: 100%;
+}
+
+main section:last-of-type table th,
+main section:last-of-type table td{
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+main section:last-of-type table th{
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+main section:last-of-type table tbody tr{
+    background-color: #fff;
+}
+main section:last-of-type table tbody tr:nth-child(odd){
+    background-color: #ccc;
+}
+
+main section:last-of-type > div {
+    display:flex;
+    justify-content: space-between;
+    margin:30px 0;
+}
+main section:last-of-type > div article {
+    flex-basis:30%;
+}
+main section:last-of-type article :last-child {
+    text-align:right;
+}
+main section:last-of-type article :last-child a {
+    background-color : #308383;
+    color:#FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+main section:last-of-type article :last-child a:hover {
+    background-color :#224444;
+}
+
+/****************************************************
+                      FOOTER
+*****************************************************/
+
+

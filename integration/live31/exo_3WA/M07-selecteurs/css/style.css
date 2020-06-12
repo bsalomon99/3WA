@@ -1,0 +1,145 @@
+/*GLOBAL */
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+
+/*******/
+/*GLOBAL */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.8;
+	margin: 0;
+	background-color:#eeeeee;
+}
+/*HEADER */
+header {
+	background-color: #308382;
+
+}
+header img {
+	display:block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	
+}
+
+nav {
+	background-color: #308382;
+	padding: 25px;
+	text-align: center;
+}
+h1 {
+	color: red;
+	text-align: center;
+}
+
+article {
+	overflow: hidden;
+}
+/*.overflow-h {
+	overflow: hidden;
+}
+section img {
+	width: 300px;
+	height: 300px;
+}
+.left {
+	float: left;
+	margin-right: 25px;
+}
+
+.right {
+	float: right;
+	margin-left: 25px;
+}
+*/
+
+nav a {
+	color: white;
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 0 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav a {
+	display: inline-block;
+}
+
+/* HEADER */
+
+
+
+
+
+
+
+
+
+/* MAIN PAGE CONTACT */
+/*tableaux*/
+table {
+	width: 90%;
+	margin: 0 auto 25px;
+}
+
+table thead {
+	
+	font-weight: bold;
+	font-size: 1.6em;
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+table tbody tr:nth-child(even) { /*Pour un background une ligne sur deux, plutot que de rajouter une class, nous pouvons ajouter une pseudo-class*/
+	background-color: white;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #cccccc;
+}
+table th {
+	text-align: left;
+	font-weight: bold;
+	padding: 10px 25px;
+}
+
+table tr td {
+	padding:10px;
+	width: 50%;
+	
+}
+
+section {
+	width: 90%;
+	margin: auto;
+}
+
+
+/* dernière section  - tous les articles de ma dernière section sauf le premier 
+section:last-child article:not(:first-of-type) {
+	 
+	
+}*/
+
+section:last-child article:not(first-of-type) {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	text-align: justify;
+	padding: 25px;
+	
+}
+
+/* FOOTER */
+footer {
+	background-color: #308383;
+	padding: 20px;
+}

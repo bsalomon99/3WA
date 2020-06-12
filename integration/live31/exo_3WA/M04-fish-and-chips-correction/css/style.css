@@ -1,0 +1,193 @@
+
+/****************************************************
+                      GLOBAL
+*****************************************************/
+*{
+	/* Explication : https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing*/
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/fond.png");
+	color: #424953;
+	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 1.8;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, nav, .btn {
+	font-family: "Slabo 27px";
+	font-weight: normal;
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1100px;
+	min-width: 800px;
+}
+
+
+/****************************************************
+                      HEADER
+*****************************************************/
+header {
+	background-color: #25b3b4;
+	border-bottom: 5px solid #1b9ca2;
+	border-top: 5px solid #1b9ca2;
+	margin-top: 100px;
+	text-align: center;
+}
+
+header nav {
+	margin:15px;
+	font-size: 1.4em;
+}
+
+header nav a {
+	color: white;
+	padding: 15px;
+}
+
+
+/****************************************************
+                      MAIN
+*****************************************************/
+
+
+/*----- Section Présentation -----*/
+#presentation {
+	margin: 50px auto;
+	text-align: center;
+	padding: 0 50px;
+}
+
+#presentation  h1 {
+	font-size: 2.5em;
+	text-align: center;
+}
+
+/*----- Section Recette -----*/
+#recette {
+	background-color: #b6dfdd;
+	display: inline-block;
+	margin-right: 2%; /*ATTENTION : ici exceptionnellement nous sommes obligés de mettre un pourcentage parce que nous utilisons inline-block pour positionner la section recette et le aside et que nous devons séparer les deux blocs avec une marge externe */
+	padding: 20px;
+	vertical-align: top;
+	width: 68%; /*width 68% + "margin-right 2% = 70%*/
+}
+
+#recette h2 {
+	font-size: 3.5em;
+	text-align: center;
+}
+
+#recette h2 span {
+	color: #1b9ca2;
+}
+
+/*------------ARTICLE-------------*/
+#recette article {
+	display: inline-block;
+	padding: 20px;
+	vertical-align: top;
+	width: 50%;
+	overflow: hidden;
+	text-align: justify;
+}
+
+#recette article h3 {
+	font-size: 1.8em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#recette article h3 i {
+	color: #25b3b4;
+	font-size: 0.8em;
+	margin: 0 5px;
+}
+
+#recette article img {
+	border-radius: 50%;
+	float: left;
+	margin-right: 15px;
+}
+
+#recette article p:nth-of-type(1) {
+	margin-top:0;
+}
+
+#recette article .btn {
+	background-color: #1b9ca2;
+	color: white;
+	font-size: 1.1em;
+	float: right;
+	margin-top: 15px;
+	padding: 5px 15px;
+}
+
+#recette article .btn i {
+	margin-left: 10px;
+}
+
+
+
+/* Rubrique Evenement */
+aside {
+	background-color: #25b3b4;
+	border: 5px solid #1b9ca2;
+	color: white;
+	display: inline-block;
+	padding: 20px;
+	width: 30%;
+}
+
+
+aside #vignette {
+	float: right;
+	margin: -75px -75px 0 0;
+}
+
+/*option pour positionner la vignette avec la propriété position:absolute*/
+/* aside{
+	position: relative; 
+}
+
+aside #vignette {
+	right: -55px;
+	position: absolute;
+	top: -55px;
+} */
+
+
+
+aside h2 {
+	font-size: 1.4em;
+}
+
+aside span,
+aside a {
+	color: #B6DFDD;
+}
+
+aside p {
+	font-size: 0.9em;
+	margin: 0 0 15px;
+}
+
+
+/****************************************************
+                      FOOTER
+*****************************************************/
+footer {
+    padding: 25px;
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+}
