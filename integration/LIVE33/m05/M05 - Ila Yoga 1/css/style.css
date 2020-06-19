@@ -1,0 +1,130 @@
+
+
+/* - Utilisation du inline-block et du float pour le placement de certains éléments
+- Taille de la police :
+    - par défaut : 1em
+    - nav : 1.5em
+    - titre header : 2em
+
+- Police utilisés :
+    - Titre et Nav : "  font-family: 'Kaushan Script', cursive;
+"
+    - Texte : "Playfair Display  font-family: 'Playfair Display', serif;"
+    
+ */
+* {
+    box-sizing: border-box;
+}
+.clear {
+    clear: both;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    line-height: 1.8em;
+    
+}
+header {
+    background-image: url(../img/fond.jpg);
+    background-position: center;
+    height: 500px;
+}
+nav a, h1 {
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    
+}
+
+h1 {
+    text-shadow: 3px 3px 3px rgba(192, 169, 175, 1);
+}
+h2 {
+    font-weight: normal;
+}
+nav {
+    padding: 25px;
+    
+}
+nav a {
+    padding: 30px;
+    display: inline-block;
+    font-size: 1.5em;
+    
+}
+.fas, .far {
+    display: block;
+}
+
+header p {
+    color: white;
+    background-color: rgba(229, 213, 240, 0.4);
+    padding: 10px;
+}
+
+.infos {
+    background-image: url(../img/background_section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.infos img {
+    width: 200px;
+}
+
+#middle {
+    display: inline-block;
+    width: 30%;
+}
+
+#classeYoga {
+    float: left;
+    
+}
+#posture {
+    float: right;
+}
+
+.section1 {
+    color: #464958;
+}
+.section1 p {
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom:50px;
+    
+}
+
+.section1 img {
+    padding: 0 20px 50px;
+}
+
+
+#middle p {
+    text-align: center;
+    padding: 25px;
+}
+
+hr {
+    width: 95%;
+    height: 1px;
+    background-color: #826cb7 ;
+}
+
+footer img {
+    width : 50px;
+}
+
+footer {
+    padding-top: 20px;
+    color: white;
+    background-color: #8d6fd1;
+}
+
+footer a {
+    color: white;
+}
+
+iframe {
+    width: 100%;
+}

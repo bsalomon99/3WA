@@ -31,3 +31,5 @@ document.write(`Nous sommes le ${days[day]} ${jour} ${months[month]} ${year}.`);
 
 
 console.log(months[month], days[day], jour, year);
+
+// https://github.com/bsalomon99/3WA

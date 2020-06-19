@@ -1,0 +1,141 @@
+
+/*instructions :
+- Largeur limité entre 800px et 1100px
+- Largeur du bloc gauche : environ 70%
+- Largeur du bloc de droite : environ 30%
+- Utiliser une class pour limiter la largeur du contenu
+- Taille de la police :
+    - par défaut : 1em
+    - titre welcome : 2.5em
+    - titre today : 3.5em
+    - titre recipe : 1.8em
+    - titre news : 1.4em
+
+*/
+
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background-image: url(../img/fond.png);
+    text-align: center;
+    
+}
+main, footer {
+    max-width: 1100px;
+    min-width: 800px;
+    margin: 0 auto;
+    color: #444a54;
+}
+
+#middlesectionleft {
+    
+    display: inline-block;
+    width:55%;
+    vertical-align: top;
+    background-color: #b6dedc;
+    
+}
+article {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: left;
+    padding:10px;
+    
+}
+
+article img {
+   border-radius: 50%; 
+   float: left;
+   width: 80px;
+   padding-right: 10px;
+}
+
+article a {
+    background-color: #34b1b2;
+    color: white;
+    padding: 5px;
+    float: right;
+}
+aside {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    background-color: #34b1b2;
+    color: white;
+    border: 5px solid #2b9aa0;
+    margin-left: 10px;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+}
+aside img {
+    position: absolute;
+    width: 90px;
+    right: -30px;
+    top: -30px;
+}
+aside a, #news {
+    color: #b6dedc;
+}
+
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+header {
+    margin-top: 50px;
+    background-color: #34b1b2;
+    border-top: 5px solid #2b9aa0;
+    border-bottom: 5px solid #2b9aa0;
+    
+}
+
+nav > a {
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.5em;
+    color: white;
+    padding: 20px;
+    
+}
+/* MAIN */
+/* Ce qui concerne le corps du site */
+#intro {
+    margin: 0 20%;
+}
+h2, h3, h4 {
+   font-family: 'Slabo 27px', serif; 
+   font-weight: 200;
+   text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 3.5em;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 1.8em;
+    margin-bottom: 0;
+}
+
+#news {
+    font-size: 1.4em;
+}
+span, h4 > i {
+    color: #2b9aa0;
+}
+/* FOOTER */
+/* Ce qui concerne le footer */
+footer {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+}
+footer img {
+    width: 50px;
+}

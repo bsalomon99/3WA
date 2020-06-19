@@ -1,0 +1,14 @@
+
+
+table {
+    border-collapse: collapse;
+}
+table td {
+    border: 1px solid blue;
+    background-color: lightblue;
+    
+}
+.idem {
+    background-color: darkblue;
+    color: white;
+}

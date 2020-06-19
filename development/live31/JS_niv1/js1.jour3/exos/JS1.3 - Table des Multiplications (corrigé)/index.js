@@ -19,8 +19,6 @@ for(let row = 1; row <= size; row++) {
     }
 }
 
-
-
 // Création en HTML de la table des multiplications.
 document.write('<table>');
 
