@@ -1,0 +1,282 @@
+/*
+## TRANSITIONS
+- logo :
+    - zoom de 1.3 sur le losange
+    - texte qui passe en rose
+
+- nav :
+    - texte et icones passent en rose
+    - texte et icones descendent de 10px
+
+- en savoir plus : background rose
+
+## BONUS
+- Faire un effet "bounce" en CSS sur les 3 petites icones de "On discute / on tente / on code".
+
+///////////////////////////////////////////////////////////
+
+- Utilisation des transitions et transformations en CSS
+- Largeur limité à 1100px maximum
+- Police utilisé : "Bree Serif"
+- Taille de police (a convertir en rem) :
+    texte: 18px
+    nav : 20px
+    logo et h1 : 40px
+    h2 : 35px
+    h3 des compétences : 30px
+    icone : 25px
+    input et textarea : 16px
+            
+            Couleurs:
+            Rouge: #f62459;
+            Gris : #999;
+            */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bree Serif', serif;
+    margin: 0 auto;
+    background-image: url(../img/fond.png);
+    line-height: 2;
+    text-align: center;
+    
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+header img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10%;
+    
+}
+header nav {
+    display: flex;
+    flex-direction: column;
+    
+}
+header > a {
+    color: grey;
+    font-size: 1.5rem;
+    
+}
+nav a {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: grey;
+    padding: 10px 0;
+}
+nav a i {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    
+}
+a {
+    text-decoration: none;
+}
+a, h2, h3 {
+    color: #f62459;
+}
+.intro {
+    background-image: url(../img/bg_header.png);
+    width:100%;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+    text-align: center;
+    
+}
+.intro p {
+    padding: 0 5%;
+}
+.intro a {
+    color: white;
+    background-color: #f62459;
+    border-radius: 10px;
+    padding: 1% 2%;
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+.realisations {
+    text-align: left;
+    padding: 0 5%;
+}
+.realisations img {
+    width: 100%;
+}
+.contact {
+    text-align: left;
+    padding: 0 10%;
+}
+form p input:nth-of-type(1) {
+    background-image: url(../img/bg_form_name.svg);
+    background-repeat: no-repeat;
+    margin-right: 5%;
+    border-radius: 30px;
+    width:47%;
+    padding: 2% 10%;
+}
+form p input:nth-of-type(2) {
+    background-image: url(../img/bg_form_mail.svg);
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    width:47%;
+    padding: 2% 10%;
+    
+}
+form textarea {
+    background-image: url(../img/bg_form_message.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    }
+input {
+    padding: 2% 7%;
+    
+}
+.btn {
+    display: flex;
+    margin-left: 35%;
+}
+    
+    /*margin: 2% 45% 2% 45%;*/
+    
+.btn input:nth-of-type(1) {
+    background-color: #f62459;
+}
+    
+
+footer {
+    text-align: center;
+}
+footer img {
+    width: 4rem;
+}
+
+    @keyframes bouncing {
+          from {transform: translateY(0px);}
+                
+
+          to {transform: translateY(-50px);}
+  
+    }
+  @-webkit-keyframes bouncing {
+         from {transform: translateY(0px);}
+                
+
+          to {transform: translateY(-50px);}
+    }
+
+/* FORMAT TABLETTE  version modifiée avec ul li dans le nav pour un passage souris hover conforme aux instructions*/
+@media screen and (min-width: 480px) and (max-width: 959px) {
+    
+
+}
+/* FORMAT DESKTOP version modifiée avec ul li dans le nav pour un passage souris hover conforme aux instructions*/
+@media screen and (min-width: 960px) {
+    body {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+   /*
+    header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    }
+    header a {
+    color: grey;
+    display: flex;
+    width: 50%;
+    }
+
+    header {
+    display: flex;
+    align-items: center;
+    }
+    */
+    header img {
+    width: 15rem;
+    
+    }
+    header img:hover {
+        width: 20rem;
+    }
+    header a:hover {
+        color: #f62459;
+        font-size: 2rem;
+    }
+    .bouncing i:hover {
+        -webkit-animation: bouncing 0.5s;
+        animation: bouncing 0.5s ease infinite alternate;
+    }
+    
+    /*from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }  
+  }*/
+  
+  footer {
+	    margin-top: 30px;
+	}
+}
+    
+    /*
+    
+	footer {
+	    margin-top: 30px;
+	}
+}
+ /*
+    @keyframes bounce {
+       0%{transform: translateY(0px);}
+       50%{transform: translateY(-50px);}
+       100%{transform: translateY(0px);}
+    } 
+    
+    @-webkit-keyframes bounce {
+       0%{transform: translateY(0px);}
+       50%{transform: translateY(-50px);}
+       100%{transform: translateY(0px);}
+    } 
+    */   
+/*@-webkit-keyframes nomAnim{ ... } 
+    @-moz-keyframes nomAnim{ ... } 
+     @-ms-keyframes nomAnim{ ... } 
+      @-o-keyframes nomAnim{ ... } 
+         @keyframes nomAnim{ ... }    
+
+div{
+     -webkit-animation: nomAnim 5s linear 2s;
+        -moz-animation: nomAnim 5s linear 2s;
+         -ms-animation: nomAnim 5s linear 2s;
+          -o-animation: nomAnim 5s linear 2s;
+             animation: nomAnim 5s linear 2s;
+}
+#ical{
+     ...
+     animation: bounce 0.35s ease infinite alternate;
+}
+
+@keyframes bounce{
+     from {top: 106px;}
+     to   {top: 86px;}
+}
+*/

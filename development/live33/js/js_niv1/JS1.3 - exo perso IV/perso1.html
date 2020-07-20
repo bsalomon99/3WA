@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="form.css" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Convertisseur</h1>
+    
+    <section>
+        <h2>celsius / far</h2>
+        <form action="get">
+            <input type="number" name="celsius"/>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p></p>
+    </section>
+    
+    
+    <section>
+        <h2>far / celsius</h2>
+        <form action="get" id="farToCel">
+            <input type="number" name="far"/>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p></p>
+    </section>
+    
+    <script src="convertCorrection.js"></script>
+</body>
+</html>

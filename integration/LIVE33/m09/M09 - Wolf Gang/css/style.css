@@ -1,0 +1,177 @@
+/*
+Couleurs:
+Fond gris : #444;
+Orange : #FF9D00;
+Fond du header : travail sur le dégradé noir et blanc (voir liens donné) 
+ Ce qui concerne le footer 
+ 
+- Largeur limité à 1500px maximum pour certains éléments
+- Taille de la police :
+    - nav : 2.5rem
+    - h1 : 4rem
+    - h2 : 3rem
+    - titres vignette : 2.5rem
+- Police utilisé : "Bodega Sans"
+- Réussir à créer les espaces entre chaque vignette "Moto" de manière la plus simple possible (utilisation des pseudo classe)
+
+
+
+/*GLOBAL */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+@font-face {
+    font-family: "Bodega Sans";
+    src:url(../fonts/BodegaSans_Black.ttf);
+}
+
+body {
+    font-family: "Bodega Sans", sans-serif;
+    background-image: url(../img/bg_body.svg);
+    background-color: #444;
+    padding: 1.5rem;
+    color: white;
+    font-weight: normal;
+    line-height: 1.5rem;
+    
+}
+main {
+    padding: 0 2rem 0 2rem;
+}
+a {
+    color: white;
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 2;
+}
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 2;
+}
+nav {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+   
+}
+header nav a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0 1rem 2rem 0;
+}
+span {
+    color: #FF9D00;
+}
+
+footer {
+    text-align: center;
+}
+footer img {
+    width: 2rem;
+}
+footer nav {
+    height: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+footer nav a {
+    padding: 1rem;
+    
+}
+header {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+1,f4f4f4+50,2c2c2c+51,474747+51,666666+51,474747+51,2b2b2b+51,333333+51,2b2b2b+100,1c1c1c+100,111111+100,131313+100,111111+100,474747+100,1c1c1c+101,2b2b2b+101 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ffffff 1%, #f4f4f4 50%, #2c2c2c 51%, #474747 51%, #666666 51%, #474747 51%, #2b2b2b 51%, #333333 51%, #2b2b2b 100%, #1c1c1c 100%, #111111 100%, #131313 100%, #111111 100%, #474747 100%, #1c1c1c 101%, #2b2b2b 101%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ffffff 1%,#f4f4f4 50%,#2c2c2c 51%,#474747 51%,#666666 51%,#474747 51%,#2b2b2b 51%,#333333 51%,#2b2b2b 100%,#1c1c1c 100%,#111111 100%,#131313 100%,#111111 100%,#474747 100%,#1c1c1c 101%,#2b2b2b 101%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ffffff 1%,#f4f4f4 50%,#2c2c2c 51%,#474747 51%,#666666 51%,#474747 51%,#2b2b2b 51%,#333333 51%,#2b2b2b 100%,#1c1c1c 100%,#111111 100%,#131313 100%,#111111 100%,#474747 100%,#1c1c1c 101%,#2b2b2b 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#2b2b2b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+article img {
+    width: 100%;
+}
+article {
+    background-color: white;
+    color: #444;
+    text-align: center;
+    margin-bottom: 7%;
+    padding: 10px 5px;
+}
+article h3 {
+    color: #FF9D00;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.btnplus {
+    background-color: #FF9D00;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-decoration: none;
+    word-spacing: 8px;
+}
+
+hr {
+    background-color: #FF9D00;
+    width: 90%;
+    height: 2px;
+    border: 0;
+}
+video {
+    width: 100%;
+}
+*#logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+i {
+    padding-bottom: 5%;
+    font-size: 2rem;
+}
+/* FORMAT TABLETTE */
+@media screen and (min-width: 450px) {
+
+
+footer nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+}
+/* FORMAT DESKTOP */
+@media screen and (min-width: 960px) {
+
+.catalogue {
+    display: flex;
+}
+article {
+    width: 100%;
+    margin-right: 3%;
+}
+main {
+    padding: 0 10% 0 10%;
+}
+header {
+    padding: 0;
+
+}
+
+}
+/* HEADER */
+
+
+/* MAIN */
+
+
+/* FOOTER */
+

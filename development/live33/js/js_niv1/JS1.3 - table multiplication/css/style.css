@@ -1,0 +1,35 @@
+
+
+/* ### HTML
+
+// Dans l'en-tête de la page :
+
+// -   Ajouter un titre au programme : "Sélecteur de Photos".
+
+// Dans la partie principale de la page :
+
+// -   Créer une liste (_id : photo-list_) affichant toutes les photos du dossiers _images_.
+// -   Ajouter un paragraphe (_id : total_) avec le message "Vous avez sélectionné 0 photo(s)", le chiffre 0 devant s'afficher en italique.
+
+// ### CSS
+
+// -   Le nombre de photos sélectionnées doit s'afficher en rouge et en gras.
+// -   Les photos doivent s'afficher les unes à côté des autres sur une largeur de 800 pixels, sans les puces, avec une marge de _1em_ et un padding de _0.5em_.
+// -   Au survol d'un élément de la liste _photo-list_, la couleur de fond devient grise (_silver_).
+// -   Quand un élément de la liste _photo-list_ à la classe _selected_, la couleur de fond devient verte (_forestgreeen_).
+// -   Le changement de couleur de fond d'un élément de la liste _photo-list_ doit s'animer.
+*/
+body {
+    width: 50%;
+    border: 1px solid blue;
+}
+h1 {
+    border: 1px solid blue;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}

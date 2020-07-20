@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+input {
+    
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    height: 2rem;
+}

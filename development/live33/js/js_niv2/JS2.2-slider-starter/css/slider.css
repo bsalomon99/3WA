@@ -1,0 +1,113 @@
+/* ******************************************************* */
+/* ************** Les éléments du caroussel ************** */
+/* ******************************************************* */
+/* ******************************************************* */
+
+/* Boite à outils */
+
+
+/*
+*  Embarquer figure et .slider-navigation
+*  dans un élément en position relative : .slider-layout
+*    -> les éléments enfants seront en position absolute afin d'apparaître sur la photo :
+*
+*       1 - liens précédent et suivant (.next,.prev)
+*       2 - figcaption (.slider-legend )
+*
+*    -> la hauteur de .slider-layout sera donc celle des photos
+*/
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+figure {
+    display: none;
+    position: relative;
+    
+}
+
+.active {
+    display: block;
+}
+figcaption {
+    text-align: left;
+    font-size: 3rem;
+    top: 0%;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.5);
+    padding-left: 10px;
+    font-weight: bold;
+    
+}
+  
+.slider {
+    position: relative;
+    
+}
+.slider button {
+    display: block;
+    font-size: 8rem;
+    position: absolute;
+    color: white;
+    width: 100px;
+    text-align: center;
+    border: none;
+    background-color: #dcdcdc;
+   
+ }
+.slider button:hover {
+    background-color: white;
+    color: #de5833;
+}
+#button-next {
+    right: -10%;
+    top: 40%;
+}
+
+#button-prev {
+    left: -10%;
+    top: 40%;
+     
+}
+#top-navig {
+    margin: 20px 0 10px;
+    text-align: center;
+    font-size : 3em;
+}
+#play-auto, #play-random {
+    color: white;
+    background-color: #de5833;
+    width: 7%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+#play-auto:hover, #play-random:hover {
+    color: #de5833;
+    background-color: white;
+    
+}
+
+#dots {
+       display: flex;
+       position: absolute;
+       font-size: 3rem;
+       bottom: 1rem;
+       justify-content: center;
+       width: 100%;
+       margin: auto;
+}
+.dot {
+      display: block; 
+      width : 3rem;
+      height : 3rem;
+      background-color : white;
+      border-radius : 50%;
+      cursor: pointer;
+      margin: 0 10px 10px 10px;
+}
+.dot:hover {
+    background-color : #de5833;
+    
+}

@@ -1,0 +1,29 @@
+/*
+    Le rectangle est bleu (royalblue), de taille 400x300 pixels et possède des coins arrondis.
+    Lorsqu'on applique la classe good en plus au rectangle, il devient vert (limegreen).
+    Lorsqu'on applique la classe important en plus au rectangle, il devient rouge (firebrick).
+    Le changement de couleur du rectangle doit s'animer.
+    Ajouter le CSS nécessaire restant pour que le programme fonctionne.
+*/
+
+.rectangle {
+    background-color: royalblue;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    transition: background-color 1.2s;
+}
+
+.good {
+    background-color: limegreen;
+}
+.rectanglehide {
+    display: none;
+}
+.rectangleshow {
+    display: block;
+}
+.important {
+    background-color: firebrick;
+}
+

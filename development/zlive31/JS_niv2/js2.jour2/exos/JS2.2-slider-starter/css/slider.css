@@ -1,0 +1,22 @@
+/* ******************************************************* */
+/* ************** Les éléments du caroussel ************** */
+/* ******************************************************* */
+
+/* Boite à outils */
+.project-toolbar {
+
+}
+
+/*
+*  Embarquer figure et .slider-navigation
+*  dans un élément en position relative : .slider-layout
+*    -> les éléments enfants seront en position absolute afin d'apparaître sur la photo :
+*
+*       1 - liens précédent et suivant (.next,.prev)
+*       2 - figcaption (.slider-legend )
+*
+*    -> la hauteur de .slider-layout sera donc celle des photos
+*/
+.slider-layout {
+  position : relative;
+}

@@ -1,0 +1,84 @@
+
+
+/* - Utilisation du inline-block et du float pour le placement de certains éléments
+- Utilisation de la position absolute
+:
+Positionnement d’un élément par rapport à son parent en lui donnant des 
+données de positionnement (top ou right ou bottom Ou left).
+
+Le parent sera en position relative, et l’élément enfant à placer en position 
+absolute avec les coordonnées de position.
+❖
+Z-index : Quand des éléments se superposent, on leur donne un ordre de priorité 
+(utilisation des positions obligatoire pour cette propriété)
+
+
+    Couleurs du Module :
+•
+Bleu principal : #2CBCD6;
+•
+Bleu clair des menus : #89DEED;
+•
+Gris du texte : #A49E9E;
+•
+Bleu foncé au passage de la souris menu : #195F87
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #A49E9E;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #195F87;
+}
+nav > ul > li > a {
+	font-weight: bold;
+	color: #2CBCD6;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+    text-align: center;
+}
+
+nav > ul > li > a:hover {
+	color: white;
+	background-color: #2CBCD6;
+}
+nav > ul > li {
+	display: inline-block;
+	padding: 0 25px 25px 0;
+}
+nav > ul > li > a {
+	font-weight: bold;
+	color: #2CBCD6;
+}
+nav {
+    position: relative;
+}
+.menu {
+	display: none;
+	position: absolute;
+	background: #2CBCD6;
+	left: 0;
+	right: 0;
+}
+nav ul li:hover .menu {
+	display: block;
+	padding-bottom: 50px;
+}
+.sous-menu {
+    border: 1px solid red;
+	width: 20%;
+	display: inline-block;
+    vertical-align: top;
+	padding: 0 2.5%;
+}

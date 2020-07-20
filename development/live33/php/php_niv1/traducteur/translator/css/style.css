@@ -1,0 +1,10 @@
+ul li {
+    list-style-type: none;
+    
+}
+input, select {
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    height: 2rem;
+}

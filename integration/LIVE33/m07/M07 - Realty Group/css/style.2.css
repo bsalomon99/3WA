@@ -1,0 +1,108 @@
+
+
+/* - Utilisation du inline-block et du float pour le placement de certains éléments
+- Utilisation de la position absolute
+:
+Positionnement d’un élément par rapport à son parent en lui donnant des 
+données de positionnement (top ou right ou bottom Ou left).
+
+Le parent sera en position relative, et l’élément enfant à placer en position 
+absolute avec les coordonnées de position.
+❖
+Z-index : Quand des éléments se superposent, on leur donne un ordre de priorité 
+(utilisation des positions obligatoire pour cette propriété)
+
+
+    Couleurs du Module :
+•
+Bleu principal : #2CBCD6;
+•
+Bleu clair des menus : #89DEED;
+•
+Gris du texte : #A49E9E;
+•
+Bleu foncé au passage de la souris menu : #195F87
+ */
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #2CBCD6;
+    color: #89DEED;
+    padding: 20px 0 20px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+}
+
+footer img {
+    width: 50px;
+    
+}
+/* MAIN */
+body {
+    color: #A49E9E;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+main {
+    margin: 0 20%;
+    line-height: 1.8em;
+    
+}
+h2 {
+    color: #2CBCD6;
+    margin-top: 50px;
+}
+/* HEADER */
+header {
+    border-bottom: 4px solid #2CBCD6 ;
+}
+
+header img, h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    position: relative
+}
+nav ul {
+    list-style: none;
+}
+nav>ul>li {
+    display: inline-block;
+    padding: 0 25px 0 25px;
+}
+
+nav>ul>li>a {
+    display: inline-block;
+    color: #2CBCD6;
+}
+nav>ul>li:hover {
+    color: white;
+    background-color: #2CBCD6;
+}
+.ssmenu {
+    display: none;
+    position: absolute;
+    background-color: #2CBCD6;
+    left: 0;
+}
+
+/*nav>ul>li:hover ul li {
+    display: block;
+    position: absolute;
+    background-color: #2CBCD6;
+    width: 100%;
+    left: 0;
+    
+}

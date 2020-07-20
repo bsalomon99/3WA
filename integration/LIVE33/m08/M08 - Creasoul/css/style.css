@@ -1,0 +1,152 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+
+/* HEADER */
+
+
+/* MAIN */
+
+/* FOOTER */
+            /*
+            - Police utilisés :
+                - "PT Sans Narrow"
+                - "Open Sans"
+            - Tailles utilisés :
+                - par défaut : 1.6rem
+                - h1 : 4rem
+                - h2 : 2.4rem
+            Couleurs:
+            Vert général : #30A894
+            Vert hover : #38B5A0
+            Vert clair : #B8DCB1
+            */
+/* FORMAT MOBILE version modifiée avec ul li dans le nav pour un passage souris hover conforme aux instructions */
+* {
+    box-sizing: border-box;
+}
+header {
+   text-align: center;
+  
+}
+header img {
+    width: 10rem;
+    padding-top: 30px;
+}
+nav {
+    background-color: #30A894;
+}
+ul {
+    padding: 0;
+}
+ul li {
+    padding: 15px 0 15px 0;
+}
+nav a {
+    color: white;
+    margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.6rem;
+    background-color: #f2f1f4;
+    margin: 1rem;
+}
+nav ul {
+list-style-type: none;
+}
+h1, h2 {
+    color: #30A894;
+    font-weight: normal;
+    margin: 0;
+}
+h1 {
+    font-size: 3rem;
+    
+}
+h2 {
+    font-size: 2rem;
+    
+}
+hr {
+	height: 1px;
+	border: 0;
+	background-color: #30A894;
+	
+}
+main a, footer a {
+    color: #B8DCB1;
+    
+}
+footer {
+    text-align: center;
+}
+footer img {
+    width: 4rem;
+}
+picture source, picture img {
+    width: 100%;
+    /*tres important pour permettre un affichage automatique pour chaque écran*/
+}
+aside {
+    display: none;
+}
+/* FORMAT TABLETTE  version modifiée avec ul li dans le nav pour un passage souris hover conforme aux instructions*/
+@media screen and (min-width: 480px) and (max-width: 959px) {
+    aside{
+        display: block;
+        background-color: #B8DCB1;
+    }
+
+    header img {
+        width: 15rem;
+        padding-top: 30px;
+    }
+}
+/* FORMAT DESKTOP version modifiée avec ul li dans le nav pour un passage souris hover conforme aux instructions*/
+@media screen and (min-width: 960px) {
+    body {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    main {
+        display: flex;
+    }
+    aside {
+        display: block;
+        background-color: #B8DCB1;
+        padding: 25px 15px;
+    }
+    
+    section {
+        padding-right: 15px;
+        padding-top: 25px;
+    }
+    ul {
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+  
+    }
+    ul li {
+        width: 100%;/*important pour affichage correct*/
+        padding: 25px 0 25px 0;
+    }
+    ul li:hover {
+	background-color: #38B5A0;
+    /*	width: 30%; si je mets la width ici, cela va changer l'alignement au passage de la souris*/
+    }
+    
+    header img {
+    width: 15rem;
+    
+    }
+	footer {
+	    margin-top: 30px;
+	}
+}
+    

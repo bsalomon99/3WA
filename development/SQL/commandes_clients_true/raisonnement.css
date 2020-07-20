@@ -1,0 +1,270 @@
+    
+/*   
+Lister toutes les commandes de la BDD
+
+Avec Quoi ?
+ idee: table html, un fichier CSS
+    fichier php pour connection, un fichier pour le calcul
+
+
+Etapes:
+    1: maquette html / CSS pour avoir une idee 'concrete'
+    2: Affichage
+        1: indentifant de produits
+        2: nom des clients
+        3: date de commande
+        4: date de livraison
+
+    3: Recuperer les informations:
+        1: dans la BDD / recevoir des donnees brut
+        2: Manipulation avec PHP / je m'assure
+        3: Affiche en HTML
+
+
+Code:
+    1: Connection avec BDD
+        Besoin d'une methode PHP pour me connecter: class PDO
+        Connection avec les identifiants necessaire: le 'host', nom de la BDD, nom utilisateur, mot de passe
+        j'obtiens un objet pdo, avec cette objet on peut faire des requetes
+    2: Preparer la requete
+        On prepare une requete: $request = $pdo->prepare('SELECT * FROM orders');
+        On execute la requete $request->execute();
+        On stocke le resultat en PHP $orders = $request->fetchAll();
+
+    3: Analyser le resultat
+        var_dump($orders);
+
+try {
+    $pdo = new PDO(
+        'mysql:host=home.3wa.io:3307;dbname=live-33_',
+        'laurentneveux',
+        '9e4c1ac2NGViY2ZiMWRhMTdmNWUwNDNmNzcxMWJh0a288dde',// ici le mot de passe
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+} catch (PDOException $error) {
+    var_dump($error->getMessage());
+    die();
+}
+
+
+$pdo->exec(set charset utf-8);
+
+
+$request = $pdo->prepare('SELECT * FROM orders');
+
+$request->execute();
+
+$orders = $request->fetchAll(PDO::FETCH_ASSOC);
+
+// analyser
+
+// affichage de toutes les commandes
+
+Comment afficher?
+ Connaitre le type de donnees: tableau associatif / besoin d'une boucle
+
+
+// generer du html
+foreach($orders as $order) {
+
+}
+
+On va inclure un nos variables dans un fichier HTML
+
+Injecter les donnees dans les cases appropriees de la table.
+
+
+Afficher le detail de la commande sur laquelle on a cliqué
+Detail d'une commande
+
+Afficher les infos du client
+
+le client souhaite qu'on puisse afficher une commande
+
+besoin d'infos : 
+    Numero de la commande
+    total, nom du client, addresse, ville, nom et prenom du 
+    contact etc etc
+
+recapitulatif de sa commande
+Les objets commandés: 
+    nom, id, prix unitaire , quantite et prix total 
+
+
+le montant HT
+la tva
+le montant total, 
+
+
+// detail
+-- je recupere la commande
+-- je recupere le client
+
+
+Comment j'identifie la commande?
+
+On recupere l'info par le biais de l'url
+    On veut recuperer les donnees de l'url
+    qui doivent contenir l'info concernant la commande
+    
+    <a href="orderdetails.php?orderNumber=" . $order["Number"]>$order["Number"]</a>
+    
+    j'arrive dans orderdetails.php:
+        // ANALYSE
+        var_dump($_GET);
+        //
+        
+        
+    Quelles infos on a besoin        
+        
+        Lister les infos
+        Une commande
+        Le detail de la commande
+        le client qui a passé la commande.
+        
+        
+    On met en place un requete sql
+    
+    
+    -- Connection
+    -- On prepare la requete.
+    -- On execute la requete.
+    -- On recupere les donnees.
+    
+code:
+
+require 'connect.php';
+
+$req = $pdo->prepare('SELECT 
+                * 
+                FROM orders AS o
+                JOIN orderdetails AS od ON o.orderNumber = od.orderNumber
+                WHERE id = ' . $orderNumber);
+                
+$req->execute();
+
+$order = $req->fetch(PDO::FETCH_ASSOC);
+
+
+
+$customerNumber = $order['customerNumber'];
+
+$request = $pdo->prepare('SELECT * FROM customers WHERE id = ' . $customerNumber);
+
+$request->excute();
+
+$customer = $request->fetch(PDO::FETCH_ASSOC);
+
+
+
+
+SELECT 
+* 
+FROM orders AS o
+JOIN orderdetails AS od ON o.orderNumber = od.orderNumber
+WHERE id = ' . $orderNumber
+                
+SELECT
+    o.orderNumber,
+    p.productName,
+    od.priceEach,
+    od.quantityOrdered,
+    ROUND(od.quantityOrdered * od.priceEach, 2) as totalPayment,
+    c.customerName,
+    c.addressLine1,
+    c.city,
+    c.country
+FROM orders AS o
+JOIN orderdetails AS od ON o.orderNumber = od.orderNumber
+JOIN customers AS c ON o.customerNumber = c.customerNumber
+JOIN products AS p ON p.productCode = od.productCode
+WHERE o.orderNumber = 10100
+ORDER BY c.customerName, o.orderDate;
+
+
+// Analyse
+
+
+$query = "SELECT
+            productName,
+            priceEach,
+            quantityOrdered,
+            ROUND(priceEach * quantityOrdered, 2) AS totalPrice
+        FROM orderdetails
+        JOIN products ON products.productCode = orderdetails.productCode
+        WHERE orderNumber = 10100
+";
+
+$statement = $pdo->prepare($query);
+
+$statement->execute();
+
+$order = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+// analyse
+$query2 = "SELECT
+                customerName,
+                contactLastName,
+                contactFirstName,
+                addressLine1,
+                addressLine2,
+                city
+            FROM customers
+            INNER JOIN orders ON orders.customerNumber = customers.customerNumber
+            WHERE orderNumber = 10100
+            ";
+
+$statement = $pdo->prepare($query2);
+
+
+$statement->execute();
+
+$customer = $statement->fetch(PDO::FETCH_ASSOC);
+
+// Affichage
+
+*/
+
+
+//////////////////////////////////////////////////////////////////
+-- sous requete SQL
+
+SET @TVA = 20 / 100; -- declaration de variable
+
+SELECT (MSRP * @TVA) AS percentage 
+FROM products 
+WHERE productCode = 'S10_1678';
+
+-- total par ligne de produits
+SELECT *,
+(SELECT (quantityOrdered * priceEach)) AS linePrice
+FROM orderdetails
+WHERE orderNumber = 10100;
+
+-- total avec avec tva (pour un produit)
+SELECT *,
+(SELECT priceEach * @TVA) as taxes,
+(SELECT (quantityOrdered * priceEach)) AS linePrice
+FROM orderdetails
+WHERE orderNumber = 10100;
+
+
+-- total avec Montant HT
+SELECT *,
+(SELECT priceEach * @TVA) AS taxes,
+(SELECT (quantityOrdered * priceEach)) AS linePrice,
+(SELECT (linePrice * @TVA)) AS montantTVA,
+(SELECT (linePrice + montantTVA)) AS ligneTTC
+FROM orderdetails
+WHERE orderNumber = 10100;
+
+
+
+-- totalTTC
+SElECT SUM(od.quantityOrdered * od.priceEach ) AS totalHT
+FROM orderdetails AS od 
+WHERE orderNumber = 10100;
+
+
+
+
