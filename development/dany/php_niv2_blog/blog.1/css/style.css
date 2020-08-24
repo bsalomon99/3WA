@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: 'Pangolin', cursive;
+    line-height: 1.8;
+}
+body a {
+    text-decoration: none;
+    
+}
+/*******************************HEADER***********************************/
+header {
+    background-image: url(../img/piment_vert3rd.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	width: 100%;
+	height: 330px;
+	font-family: 'Pangolin', cursive;
+	text-align: center;
+	margin-bottom: 3%;
+	
+}
+nav {
+    background-color: rgba(184, 187, 202, 0.3);
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+h1 {
+    padding-top: 10%;
+    
+}
+/*******************************FOOTER***********************************/
+
+
+
+
+
+
+/**********************HOME PAGE******************************************/
+main {
+    background-color: white;
+    position: relative;
+    margin: auto;
+}
+
+.articles {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 60%;
+    
+}
+
+li {
+    list-style-type: none;
+    width: 30%;
+    text-align: center;
+    background-color: #ccc6c63b;
+    border-radius: 4px;
+   
+    margin: 1%;
+    padding: 1%;
+}
+li p {
+    color: #37434c;
+    text-align: left;
+}
+h2 {
+    font-family: 'Pangolin', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: #195766;
+    margin-left: 5%;
+    /*color: #37434c*/
+}
+
+
+h3 a {
+    font-size: 2rem;
+    color: #195766;
+    text-align: center;
+}
+h3 .fas {
+	font-size: 1.5rem;
+    color: #195766;
+}
+
+/**********************ADD COMMENT******************************************/
+fieldset {
+    
+    width: 50%;
+    height: 50%;
+    background-color: #ccc6c63b;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 7px solid #DEE0E1;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+legend {
+    padding: 0 7px 0 7px;
+}
+input, textarea {
+    border: none;
+}
+button, input:last-child {
+    
+    background-color: #f7400d;
+    color: white;
+    border-radius: 5px;
+}
+button {
+    width: 30%;
+    
+}
+/**********************DISPLAY ARTICLE******************************************/
+
+section {
+    
+    color: #37434c;
+    width: 40%;
+    margin: 20px auto;
+    background-color: #ccc6c63b;
+    padding: 20px;
+}
+.comment {
+    padding-left: 0;
+}
+.comment li {
+   text-align: left;
+   width: 100%;
+   line-height: 1.5;
+   
+   
+}
+.last-child {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+} 
+.listCom {
+    position: absolute;
+    right: 30px;
+    width: 15%;
+    top: -20px;
+    text-align: left;
+}

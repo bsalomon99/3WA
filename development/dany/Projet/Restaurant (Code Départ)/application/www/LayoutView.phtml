@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3WA Restaurant</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/3wa-resto.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-button.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-form.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-table.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Pangolin&family=Prata&family=Rock+Salt&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- Librairie jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+<header>
+    <h1>Restaurant... La Cabanne au fond du jardin !</h1>
+    <h2>Produits de saison, 100% frais, direct du jardin ou de producteurs locaux</h2>
+    <nav class="home">
+        <?php if ( isset($_SESSION['connected_user']) == false ): ?>
+        <a href="<?= $requestUrl ?>"><i class="fas fa-home"></i> Home Page
+            
+        </a>
+        <!-- https://live-33.sites.3wa.io/projet/Restaurant%20(Code%20D%C3%A9part)/
+        index.php/test -->
+        
+        <a href="<?= $requestUrl ?>/register"><i class="fas fa-file-signature"></i> Créer un compte
+        </a>
+        <a href="<?= $requestUrl ?>/login"><i class="fas fa-wifi"></i> Se connecter
+        </a>
+        
+        <?php else: ?>
+                <p id="greetings"> Bonjour 
+                    <?= htmlspecialchars($_SESSION['connected_user']['firstname']) ?> !
+                    <!--  $_SESSION['connected_user']['lastname'] ?> -->
+                </p>
+                 <a href="<?= $requestUrl ?>/order">Commander </a>
+                 <a id="logoff" href="<?= $requestUrl ?>/disconnect">Deconnexion</a>
+                
+            <?php endif; ?>
+        
+    </nav>
+    
+</header>
+
+<!-- Interface utilisateur -->
+<nav class="user-interface">
+    <ul class="link-list">
+        <!-- Code HTML/PHP à écrire -->
+    </ul>
+</nav>
+
+<main>
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template'] ?>
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <ul class="link-list">
+        <li><img src="<?= $wwwUrl ?>/images/payment/visa.png" alt="Visa"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/mastercard.png" alt="MasterCard"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/paypal.svg" alt="PayPal"></li>
+    </ul>
+    <small>Réalisé avec <i class="fas fa-heart"></i>&nbsp; par les élèves de la 3W Academy</small>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>

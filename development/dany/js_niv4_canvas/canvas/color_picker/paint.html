@@ -1,0 +1,47 @@
+<!--
+
+    Pas de JQUERY
+    
+ 1 : canvas : eventListener sur le mousemove 
+ 2 : mousemove : Recuperer les coordonnées de la souris
+ 3 : dessiner des lignes entre les traits
+ 4 : Demarrer le dessin et le terminer au bon moment
+-->
+
+<html>
+    <head>
+        <script src="paint.js"></script>
+        <style>
+            canvas
+            {
+                border:1px solid black;
+                margin:50px;
+            }
+            
+            .color
+            {
+                width:30px;
+                height:30px;
+                border-radius : 50%;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <canvas id="paint" width="500" height="400"></canvas>
+        <canvas id="colorpicker" width="200" height="200"></canvas>
+
+        <div class="color" style="background-color:blue;" data-color="blue"> </div>
+        <div class="color" style="background-color:red;" data-color="red"> </div>
+        <div class="color" style="background-color:yellow;" data-color="yellow"> </div>
+        <div class="color" style="background-color:brown;" data-color="brown"> </div>
+        
+        <button class="size" data-size="1"> Fin </button>
+        <button class="size" data-size="3"> Moyen </button>
+        <button class="size" data-size="7"> Epais </button>
+        
+        <button id="eraser"> Effacer </button>
+    </body>
+    
+</html>

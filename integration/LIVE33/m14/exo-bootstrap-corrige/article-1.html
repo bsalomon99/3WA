@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Article 1</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap">
+		<a class="navbar-brand col-md-3" href="#">Mon blog</a>
+		<form class="form-inline col-md-6">
+			<input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+			<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+		</form>
+		<ul class="navbar-nav col-md-3 text-right">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="#"><i class="fa fa-power-off"></i> Se déconnecter</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-3 d-none d-md-block bg-light sidebar">
+				<div class="sidebar-sticky">
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-home"></i> Tableau de bord</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-folder"></i> Pages</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="articles.html"><i class="fa fa-paragraph"></i> Articles</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-tags"></i> Tags</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-file"></i> Fichiers</a>
+						</li>
+					</ul>
+		
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 my-3 text-muted">Paramètres</h6>
+					
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-users"></i> Utilisateurs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-cogs"></i> Paramètres</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center my-4">
+					<h1 class="h2">Article 1</h1>
+					<div class="btn-toolbar">
+						<a class="btn btn-sm btn-outline-secondary mr-2" href="articles.html"><i class="fa fa-times"></i> Annuler</a>
+						<button class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Valider</button>
+					</div>
+				</div>
+				<form>
+					<div class="form-group">
+						<label for="status">Statut</label>
+						<select class="form-control" id="status">
+							<option>Publié</option>
+							<option>Non publié</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="title">Titre de l'article</label>
+						<input type="text" class="form-control" id="title" value="Lorem ipsum dolor sit amet consectetur">
+					</div>
+					<div class="form-group">
+						<label for="content">Contenu de l'article</label>
+						<textarea class="form-control" id="content" rows="12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium provident quaerat error nesciunt iste. Quod, numquam? Optio nesciunt officia nihil eveniet voluptatum deleniti sit saepe tempora odio sint! Excepturi, eveniet.</textarea>
+					</div>
+				</form>
+			</main>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

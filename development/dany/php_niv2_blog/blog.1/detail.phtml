@@ -1,0 +1,63 @@
+<?php include 'includes/header.php'; ?>
+
+		<main>
+		    <section class="detail">
+		        
+		        
+                <h2><?= htmlspecialchars($article['title'])  ?></h2>
+                
+                <p>content : <?= htmlspecialchars($article['content'])  ?></p>
+                <p>Catégorie : <?= $article['nom'] ?></p>
+                <p>Date de publication :  <?= $article['publication_date'] ?> </p>
+                <p>Auteur : <?= htmlspecialchars($article['firstname']) ?> 
+                <?= htmlspecialchars($article['lastname'])?></p>
+                
+              <form method="POST" action="add_comment.php?id=<?= $id ?>" >
+		   		
+	        	<fieldset>
+	            	<legend>
+	                	Ajouter un commentaire
+	                </legend>
+	                	
+	                	<label for="nickname"> Pseudo : </label>
+                		<input type="text" name="nickname" id="nickname">
+                	
+                	
+                	
+                		<label for="content"> Commentaire : </label>
+                		<textarea name="content" id="content"></textarea>
+                	
+                	
+                		                		
+                		<input type="hidden" name="article_id" value="<?= $id ?>">
+                		<button><input type="submit" value="Save"></button>
+    
+	            </fieldset>    
+               
+            </form>    
+            
+            </section>
+            <section class="listCom">
+	            <h3>  <i class="far fa-comment"></i> Les commentaires </h3>
+	            <ul class="comment">
+				    <?php foreach( $comments as $comment ) : ?>
+				        
+				        <li>De : <?= htmlspecialchars($comment['nickname']) ?> </li> 
+				        <li class="lastchild"><?= htmlspecialchars($comment['content']) ?> </li>
+				        <br>
+				    <?php endforeach; ?>
+				    
+				</ul>
+			</section>
+       
+            
+		   
+		  
+		</main>
+			
+<?php include 'includes/footer.php'; ?>	
+
+
+        
+    
+       

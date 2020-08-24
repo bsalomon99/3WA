@@ -1,0 +1,141 @@
+<!-- fichier PHP : add.php -->
+
+<?php
+
+	// connexion de BD
+    
+    $pdo = new PDO
+	(
+		'mysql:host=localhost;dbname=live-24_blog;charset=UTF8',
+		'danys',
+		'M2MyNzJkNGZiODk4OTIzMGFkMmFmYmE43Wa!',
+	    [
+	    	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+	        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // fetchall en tableau associatif automatiquement
+	    ]
+    );
+
+	// liste des categories 
+    
+    $sql = "SELECT * categories";
+    
+    $query = $pdo->query($sql);
+    
+    $categories = $query->fetchAll();
+    //$categoryList
+    
+    
+    // liste des auteurs
+    
+    $sql = "SELECT * authors";
+    
+    $query = $pdo->query($sql);
+    
+    $authors = $query->fetchAll();
+
+	include 'add.phtml';
+
+?>
+
+<!-- fichier HTML add.phtml -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+    	<...></...>
+    </head>
+    <body>
+    	<header></header>
+        
+        <form method="POST" action="add_article.php">
+        	<fieldset>
+            	<legend>
+                	Nouvel article
+                </legend>
+                <label for="title"> Titre : </label>
+                <input type="text" name="title" id="title">
+                <label for="content"> Article </label>
+                <textarea name="content" id="content"></textarea>
+                
+                <label for="author"> Auteur </label>
+                <select name="author" id="author">
+                	<?php foreach( $authors as $author): ?>
+                    	<option value="<?= $author['id'] ?>"> 
+                    	    <?= $author['firstname'] ?> <?= $author['lastname'] ?> 
+                    	</option>
+                    <?php endforeach; ?>
+                   
+                    <?php 
+                    for( $i = 0 ; $i < count($authors); $i++ )
+                    {
+                    	$author = $authors[$i];
+                    }
+                    ?>
+                </select>
+                
+                <label for="category"> Categorie </label>
+                <select name="category" id="category">
+                	<?php foreach( $categories as $category): ?>
+                    	<option value="<?= $category['id'] ?>"> 
+                    	    <?= $category['name'] ?> 
+                    	</option>
+                    <?php endforeach; ?>
+                </select>
+                
+                <button>
+                	Ajouter
+                </button>
+            </fieldset>
+        </form>
+        
+        <footer></footer>
+    </body>
+</html>
+
+<!-- add_article.php -->
+
+<?php
+
+<?php
+
+	// connexion de BD
+    
+    $pdo = new PDO
+	(
+		'mysql:host=localhost;dbname=live-33_blog;charset=UTF8',
+		'danys',
+		'M2MyNzJkNGZiODk4OTIzMGFkMmFmYmE43Wa!',
+	    [
+	    	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+	        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // fetchall en tableau associatif automatiquement
+	    ]
+    );
+    
+    var_dump($_POST);
+    
+    // name des formulaire! 
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $author = $_POST['author'];
+    $category = $_POST['category'];
+    
+    var_dump($title);
+    var_dump($content);
+    var_dump($author);
+    var_dump($category);
+    
+    $sql = "INSERT INTO articles(title, content, publication_date, category_id, author_id)
+    VALUES ( ? , ? , NOW() , ? , ? )";
+    
+    $query =  $pdo->prepare($sql);
+    
+    $query->execute([ $title, $content, $category, $author ]);
+    
+    // redirection 
+    
+    //header('Location: index.php');
+
+?>
+
+?>

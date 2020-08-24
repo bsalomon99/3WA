@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery/Ajax</title>
+    <meta name="description" content="Requêtes AJAX exploitant la méthode get() de la librairie jQuery">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link href="css/lib/normalize.css" rel="stylesheet">
+    <link href="css/lib/all.min.css" rel="stylesheet">
+    <link href="css/lib/layout-3wa.css" rel="stylesheet">
+    <link href="css/lib/grillade-grid.css" rel="stylesheet">
+    <link href="css/lib/theme-corporate.css" rel="stylesheet">
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Fonctions du projet -->
+    <script src="js/utilities.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/events.js"></script>
+</head>
+<body>
+    <header class="banner">
+      <a class="banner-link" href="">
+        <strong class="banner-title">jQuery/Ajax</strong>
+        <small>Module JS3</small>
+      </a>
+    </header>
+    <main class="project">
+      <header class="project-header bg-light">
+        <h1>Exemples de requêtes AJAX</h1>
+        <p>Les méthodes $.get(), $.getJSON() et $.post() de la librairie jQuery</p>
+        <nav>
+          <a class="btn" href="#s1">HTML statique</a>
+          <a class="btn" href="#s2">JSON</a>
+          <a class="btn" href="#s3">HTML dynamique</a>
+          <a class="btn" href="#s4">JSON dynamique</a>
+          <a class="btn" href="#s5">POST vers fichier</a>
+        </nav>
+      </header>
+
+      <section id="s1" class="project-section bg-default">
+        <div class="container">
+          <header>
+            <h2>Exemple 1 : code HTML statique</h2>
+            <p>Récupérer du code HTML à partir d'un fichier existant </p>
+          </header>
+          <ul>
+              <li><span>Méthode Http :</span> GET</li>
+              <li><span>Url cible :</span> static-content/static-content.html</li>
+              <li><span>Données transmises :</span> aucune</li>
+              <li><span>Réponse attendue :</span> code HTML</li>
+              <li><span>Création de la réponse :</span> fichier statique</li>
+          </ul>
+
+          <h3>Envoi de la requête</h3>
+
+          <button class="btn send-request-button" data-example="example-1">
+              <i class="far fa-paper-plane" aria-hidden="true"></i> Envoyer la requête Ajax
+          </button>
+
+          <blockquote>Code javascript : <code>
+           $.get('static_content/static_content.html', onGetResponseExample1);
+          </code></blockquote>
+
+          <h3>Réponse du serveur</h3>
+
+          <p>Une fois la requête effectuée, la réponse est insérée via javaScript dans un élément HTML prévu à cet effet : </p>
+
+          <blockquote>Code javascript : <code>
+           $('#example-1').html(staticHtmlContent);
+          </code></blockquote>
+
+          <div id="example-1" class="bg-accent"></div>
+
+          <h4>Contenu brut de la réponse</h4>
+
+          <p>La réponse du serveur correspond au contenu du fichier <code>static_content/static_content.html</code></p>
+          <p>Cette réponse est visible dans la console web via l'onglet "Network" ou "réseau" une fois la requête effectuée avec le type XHR (Objet XMLHttpRequest)</p>
+          <p>En cliquant sur l'objet, puis sur l'onglet "Response" ou "Réponse", le contenu transmis est visible : </p>
+          <pre id="content-example-1" class="bg-dark"></pre>
+        </div>
+      </section>
+
+      <section id="s2" class="project-section bg-light">
+        <div class="container">
+          <header>
+            <h2>Exemple 2 : données JSON statiques</h2>
+            <p>Récupérer des données au format JSON à partir d'un fichier existant</p>
+          </header>
+          <ul>
+              <li><span>Méthode Http :</span> GET</li>
+              <li><span>Url cible :</span> static-content/static-data.json</li>
+              <li><span>Données transmises :</span> aucune</li>
+              <li><span>Réponse attendue :</span> données JSON</li>
+              <li><span>Création de la réponse :</span> fichier statique</li>
+          </ul>
+
+          <h3>Envoi de la requête</h3>
+          <button class="btn send-request-button" data-example="example-2">
+              <i class="far fa-paper-plane"></i> Envoyer la requête Ajax
+          </button>
+          <blockquote>Code javascript : <code>
+              $.getJSON('static_content/static_data.json', onGetResponseExample2);
+          </code></blockquote>
+
+          <h3>Réponse du serveur</h3>
+          <p>Une fois la requête effectuée, la réponse JSON reçue <strong>est déjà traduite en javaScript</strong>; elle est insérée, après traitement d'un objet, dans l'élément HTML prévu à cet effet : </p>
+
+          <div id="example-2" class="bg-default"></div>
+
+          <h4>Contenu brut de la réponse</h4>
+          <pre id="content-example-2" class="bg-dark"></pre>
+
+        </div>
+      </section>
+
+      <section id="s3" class="project-section bg-default">
+        <div class="container">
+          <header>
+            <h2>Exemple 3 : code HTML dynamique (PHP)</h2>
+            <p>Récupérer du code HTML généré dynamiquement en PHP</p>
+          </header>
+          <ul>
+              <li><span>Méthode Http :</span> GET</li>
+              <li><span>Url cible :</span> static-content/static-data.json</li>
+              <li><span>Données transmises :</span> aucune</li>
+              <li><span>Réponse attendue :</span> code HTML</li>
+              <li><span>Création de la réponse :</span> générée dynamiquement en PHP</li>
+          </ul>
+
+          <h3>Envoi de la requête</h3>
+          <button class="btn send-request-button" data-example="example-3">
+              <i class="far fa-paper-plane"></i> Envoyer la requête Ajax
+          </button>
+          <blockquote>Code javascript : <code>
+              $.get('dynamic_content/movies.php', onGetResponseExample3);
+          </code></blockquote>
+
+          <h3>Réponse du serveur</h3>
+          <div id="example-3" class="bg-default"></div>
+
+          <h4>Contenu brut de la réponse</h4>
+          <p>Le contenu PHP étant interprété côté serveur, celà revient à recevoir du code HTML statique</p>
+          <pre id="content-example-3" class="bg-dark"></pre>
+        </div>
+      </section>
+
+      <section id="s4" class="project-section bg-light">
+        <div class="container">
+          <header>
+            <h2>Exemple 4 : données JSON dynamiques (PHP/MySQL)</h2>
+            <p>Récupérer des données JSON générées dynamiquement en PHP à partir de la base de données</p>
+          </header>
+          <ul>
+              <li><span>Méthode Http :</span> GET</li>
+              <li><span>Url cible :</span> static-content/static-data.json</li>
+              <li><span>Données transmises :</span> aucune</li>
+              <li><span>Réponse attendue :</span> code HTML</li>
+              <li><span>Création de la réponse :</span> générée dynamiquement en PHP</li>
+          </ul>
+
+          <h3>Envoi de la requête</h3>
+          <button class="btn send-request-button" data-example="example-4">
+              <i class="far fa-paper-plane"></i> Envoyer la requête Ajax
+          </button>
+          <blockquote>Code javascript : <code>
+            $.getJSON('dynamic_content/trucks.php', onGetResponseExample4);
+          </code></blockquote>
+
+          <h3>Réponse du serveur</h3>
+          <div id="example-4" class="bg-default"></div>
+
+          <h4>Contenu brut de la réponse</h4>
+          <p>Le contenu est récupéré en dataBase puis traduit en JSON par PHP; il est récupéré en JSON retraduit en javaScript.</p>
+          <pre id="content-example-4" class="bg-dark"></pre>
+        </div>
+      </section>
+
+        <section id="s5" class="project-section bg-default">
+            <div class="container">
+                <header>
+                    <h2>Exemple 5 : poster des données vers un fichier (PHP)</h2>
+                    <p>Enregistrer dans un fichier côté serveur des données provenant du client puis les afficher</p>
+                </header>
+                <ul>
+                    <li><span>Méthode Http :</span> POST</li>
+                    <li><span>Url cible :</span> post-data.php</li>
+                    <li><span>Données transmises :</span> du texte dans le corps (body) de la requête</li>
+                    <li><span>Réponse attendue :</span> données JSON du fichier</li>
+                    <li><span>Création de la réponse :</span> générée dynamiquement en PHP</li>
+                </ul>
+
+                <h3>Liste de courses</h3>
+                <form id="example-5-form">
+                    <div class="field-group">
+                        <label for="example-5-course">Ajouter à la liste de courses :</label>
+                        <input type="text" name="example-5-course" id="example-5-course">
+                    </div>
+                </form>
+
+                <h3>Envoi de la requête</h3>
+                <button class="btn send-request-button" data-example="example-5">
+                    <i class="far fa-paper-plane"></i> Envoyer la requête Ajax
+                </button>
+                <blockquote>Code javascript : <code>
+                    $.post('post-data.php', {data: course}, onGetResponseExample5);
+                </code></blockquote>
+
+                <h3>Réponse du serveur</h3>
+                <ul id="example-5" class="bg-accent list-unstyled"></ul>
+
+                <h4>Contenu brut de la réponse</h4>
+                <p>Le contenu est récupéré du fichier par PHP et envoyé au client en JSON; le JSON est désérialisé en JavaScript.</p>
+                <pre id="content-example-5" class="bg-dark"></pre>
+            </div>
+        </section>
+
+    </main>
+    <footer class="mentions">
+        <a href="https://3wa.fr/" title="Site de la 3WA"><img src="./css/lib/img/3wa.png" alt="3W Academy" width="50"></a>
+			<p><strong> &copy; 3W Academy - Formation Développeur WEB - Tous&nbsp;droits&nbsp;réservés</strong><br>
+			Cet exercice est mis à disposition des stagiaires dans le cadre exclusif de leur apprentissage</p>
+      <p><small>Nous remercions les auteurs des photos récoltées sur <a href="https://pixabay.com/" target="_blank">Pixabay</a></small></p>
+      <a class="goTop" href="#" aria-label="Remonter">↑</a>
+		</footer>
+
+    <!-- Code principal du projet -->
+    <script src="js/main.js"></script>
+
+    <!-- Affichage du support 3wa -->
+    <script src=".3wa/js/resources.js" data-md="resources/resources.md"></script>
+</body>
+</html>

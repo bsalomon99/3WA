@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>blog</title>
+</head>
+<body>
+    
+    <h1>My first blog</h1>
+    
+    <section>
+        
+        <form method="POST" action="main.php">
+            <fieldset>
+                <legend>Ajouter un article</legend>
+                
+                <label for="title"> Titre : </label>
+                <input type="text" name="title" id="title">
+                
+                <label for="content"> Article </label>
+                <textarea name="content" id="content"></textarea>
+                        
+                <label for="author">Choisissez un auteur</label>
+                <select name="author" id="author"/>
+                <?php foreach($authors as $author): ?>
+                   
+                    
+                <option value="<?= $author['firstname'] ?>"><?= $author['firstname'] . ' ' . $author['lastname']  ?>  </option>
+                   
+                <?php endforeach ?>   
+                </select>
+                
+            
+                <label for="category">Choisissez une catégorie</label>
+                <select name="category" id="category"/>
+                <?php foreach($categories as $category) : ?>
+                
+                
+                <option value="<?= $category['nom']  ?>"><?= $category['nom']  ?></option>
+                
+                <?php endforeach ?>
+                </select>
+                
+               <button>Ajouter</button>    
+            </fieldset>    
+        </form>
+    
+    
+    <!--
+    <form method="POST" action="request.php" id="">
+        <label for="category">Choisissez une catégorie</label>
+        <select name="category" id="category"/>
+                
+                <option value="livres">Livres</option>
+                <option value="musique">Musique</option>
+            </select>
+            
+    </form> 
+    -->
+    </section>
+ </body>
+ </htlm>

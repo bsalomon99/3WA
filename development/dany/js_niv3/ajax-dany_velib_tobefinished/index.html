@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+
+
+<head>
+    <title>velib</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <style>
+        #stations
+        {
+            height:300px;
+            overflow-y:scroll;
+        }
+        #map { position:absolute; height: 400px; width:400px; right:0; top:0}
+    </style>
+
+</head>
+
+<body>
+    <div id="stations">
+        <ul>
+        </ul>
+    </div>
+    <div id="station" style="display:none">
+        <h1></h1>
+        <p> Il reste <span id="available-bikes">19</span> Vélib(s) disponibles à cette station. </p>
+        <h1>Adresse</h1>
+        <p id="address"> </p>
+        <h1>Places disponibles</h1>
+        <p id="free-slots"> </p>
+        <h1>Localisation</h1>
+        <p id="GPS"></p>
+        
+        
+    </div>
+    <div id="map"></div>
+</body>
+
+</html>

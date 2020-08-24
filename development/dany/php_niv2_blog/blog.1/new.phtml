@@ -1,0 +1,48 @@
+
+<?php include 'includes/header.php'; ?>
+    	
+        <h2>Rédiger un nouvel article</h2>
+        <form method="POST" action="add.php">
+            <fieldset>
+            	<legend>
+                	Nouvel article
+                </legend>
+                <label for="title"> Titre : </label>
+                <input type="text" name="title" id="title">
+                
+                <label for="content"> Article </label>
+                <textarea name="content" id="content"></textarea>
+
+                <label for="author"> Auteur </label>
+                <select name="author" id="author">
+                        
+                     <?php foreach( $authors as $author): ?>
+                    	<option value="<?= htmlspecialchars($author['id']) ?>">
+                    	    <?= htmlspecialchars($author['firstname']) ?> <?= htmlspecialchars($author['lastname']) ?>
+                    	</option>
+                    <?php endforeach; ?>
+
+                    <?php
+                    for( $i = 0 ; $i < count($authors); $i++ )
+                    {
+                    	$author = $authors[$i];
+                    }
+                    ?>
+                </select>
+
+                <label for="category"> Categorie </label>
+                <select name="category" id="category">
+                	<?php foreach( $categories as $category): ?>
+                    	<option value="<?= $category['id'] ?>">
+                    	    <?= $category['nom'] ?>
+                    	</option>
+                    <?php endforeach; ?>
+                </select>
+
+                <button>
+                	Ajouter
+                </button>
+            </fieldset>
+        </form>
+
+ <?php include 'includes/footer.php'; ?>		

@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DOM  IE : innerHTML , getElementById
+        window.alert('')
+        alert('')
+
+        https://caniuse.com/
+        JQuery -> Compatibilité
+        Fonctions DOM
+        -> plus concis
+    -->
+    <p id="text"> Bonjour </p>
+    <ul id="contacts">
+        <li> hassan</li>
+        <li> Fabien </li>
+        <li> Dany </li>
+    </ul>
+
+    <button id="coucou"> cliquez moi </button>
+
+    <script>
+        // selection de la balise
+        let text = document.querySelector("#text");
+        // modification de son contenu
+        text.textContent = 'Hello';
+
+        // JQUERY
+
+        $("#text").text("Re bonjour");
+
+        //=======
+
+        let contacts = document.querySelectorAll("li");
+
+        for (let i = 0; i < contacts.length; i++) {
+            contacts[i].classList.add('red');
+        }
+
+        //===============
+
+        $("#contacts li").addClass('blue');
+
+        //=============
+
+        function onClick() {
+
+            alert('bonjour ' + $(this).text());
+        }
+
+        function onClickDisapear() {
+            $(this).hide();
+        }
+
+        let button = document.getElementById("coucou");
+        
+        button.addEventListener('click', function() {
+            //$("li").toggle();
+            $('li').animate(
+                {
+                    marginLeft : '500px',
+                    opacity : 0.2
+                }, 2000
+            );
+        })
+
+        //=============
+
+        $("#contacts li").click(onClick);
+
+        $("#contacts li").click(onClickDisapear);
+        
+        // https://jqueryui.com/datepicker/
+        
+        
+    </script>
+
+</body>
+
+</html>

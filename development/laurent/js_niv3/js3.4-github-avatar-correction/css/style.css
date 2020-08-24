@@ -1,0 +1,9 @@
+.project-section {
+    display : flex;
+    align-items: start;
+}
+
+.project-section > * {
+    flex : 1;
+    margin : 0 2.5%;
+}

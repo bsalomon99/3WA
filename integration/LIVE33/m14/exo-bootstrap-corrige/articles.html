@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Articles</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap">
+		<a class="navbar-brand col-md-3" href="#">Mon blog</a>
+		<form class="form-inline col-md-6">
+			<input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+			<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+		</form>
+		<ul class="navbar-nav col-md-3 text-right">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="#"><i class="fa fa-power-off"></i> Se déconnecter</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-3 d-none d-md-block bg-light sidebar">
+				<div class="sidebar-sticky">
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-home"></i> Tableau de bord</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-folder"></i> Pages</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="articles.html"><i class="fa fa-paragraph"></i> Articles</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-tags"></i> Tags</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-file"></i> Fichiers</a>
+						</li>
+					</ul>
+		
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 my-3 text-muted">Paramètres</h6>
+					
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-users"></i> Utilisateurs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-cogs"></i> Paramètres</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center my-4">
+					<h1 class="h2">Articles</h1>
+					<div class="btn-toolbar">
+						<button class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Ajouter</button>
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-responsive-sm">
+					<thead>
+						<tr>
+							<th>Titre</th>
+							<th>Date de modification</th>
+							<th class="text-right">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lorem ipsum dolor sit amet consectetur</td>
+							<td>22/07/2019</td>
+							<td class="text-right">
+								<a class="btn btn-sm btn-outline-secondary" href="article-1.html"><i class="fa fa-pencil"></i> Modifier</a>
+								<a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete" href="#"><i class="fa fa-trash"></i> Supprimer</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Magni cum eveniet ab asperiores nam</td>
+							<td>20/07/2019</td>
+							<td class="text-right">
+								<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+								<a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete" href="#"><i class="fa fa-trash"></i> Supprimer</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Animi ullam magni repellat praesentium omnis</td>
+							<td>18/07/2019</td>
+							<td class="text-right">
+								<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+								<a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete" href="#"><i class="fa fa-trash"></i> Supprimer</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Molestiae praesentium adipisci tempore enim. Excepturi</td>
+							<td>17/07/2019</td>
+							<td class="text-right">
+								<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+								<a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete" href="#"><i class="fa fa-trash"></i> Supprimer</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Aperiam quisquam ratione sint vero laboriosam</td>
+							<td>06/07/2019</td>
+							<td class="text-right">
+								<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+								<a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete" href="#"><i class="fa fa-trash"></i> Supprimer</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Modi esse sint aliquam hic dolores</td>
+							<td>03/07/2019</td>
+							<td class="text-right">
+								<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+								<a class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete" href="#"><i class="fa fa-trash"></i> Supprimer</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<nav>
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled"><span class="page-link">Previous</span></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><span class="page-link">2</span></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#">Next</a></li>
+					</ul>
+				</nav>
+			</main>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-danger" id="exampleModalLabel">Suppression d'un article</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					Cette action n'est pas réversible!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger">Supprimer</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

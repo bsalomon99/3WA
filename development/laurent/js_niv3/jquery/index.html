@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            margin-top: 2em;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>localstorage</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Contact List</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="POST" action="index.html" id="form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">FirstName</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="firstname"
+                            name="firstname"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="submit" class="btn btn-xs btn-success">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn">button jquery</button>
+        </div>
+    </div>
+
+    <script
+	  src="https://code.jquery.com/jquery-3.5.1.js"
+	  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	  crossorigin="anonymous">
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        let name = localStorage.getItem("valeur");
+        
+        if( name == null )
+        {
+            name = window.prompt('quel est votre nom');
+            // name va etre enregistré dans le navigateur
+            localStorage.setItem("valeur", name);
+        }
+        
+        
+        alert(`bonjour ${name}`);
+    </script>
+</body>
+
+</html>

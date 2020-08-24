@@ -1,0 +1,89 @@
+<h3> Créer un compte</h3>
+
+<?php
+    if( isset($errors) == true)
+    {
+        foreach($errors as $error)
+        {
+            echo "<div>$error</div>";
+        }
+    }
+?>
+
+<form id="register" action="<?= $requestUrl ?>/register" method="POST">
+    <fieldset> 
+        <legend>Identité et coordonnées</legend>
+            <p id="firstname_error"></p>
+            <label for="firstname"> Prénom</label>
+            <input type="text" id="firstname" name="firstname">
+            
+            <p id="lastname_error"></p>
+            <label for="lastname"> Nom</label>
+            <input type="text" id="lastname" name="lastname">
+        
+            
+            
+            <label> Date de naissance</label>
+            <select name="day" id="day">
+                <?php for($i = 1; $i <= 31; $i++) : ?>
+                    <option value="<?= $i ?>"><?= $i ?></option>
+                <?php endfor; ?>
+            </select>
+            
+            <select name="month" id="month">
+    		<option value="1">Janvier</option>
+    		<option value="2">Février</option>
+    		<option value="3">Mars</option>
+    		<option value="4">Avril</option>
+    		<option value="5">Mai</option>
+    		<option value="6">Juin</option>
+    		<option value="7">Juillet</option>
+    		<option value="8">Août</option>
+    		<option value="9">Septembre</option>
+    		<option value="10">Octobre</option>
+    		<option value="11">Novembre</option>
+    		<option value="12">Décembre</option>
+    	    </select>
+    	    
+    	    <select name="year" id="year">
+                <?php for($i = 1900; $i <= date('Y'); $i++) : ?>
+                    <option value="<?= $i ?>"><?= $i ?></option>
+                <?php endfor; ?>      
+    	    </select>
+    	    
+    	    <p id="address_error"></p>
+            <label for="address"> Adresse</label>
+            <textarea name="address" id="address"></textarea>
+            
+            <p id="city_error"></p>
+            <label for="city"> Ville</label>
+            <input type="text" id="city" name="city">
+            
+            <p id="zipcode_error"></p>
+            <label for="zipcode"> Code postal</label>
+            <input type="text" id="zipcode" name="zipcode">
+            
+            <p id="phone_error"></p>
+            <label for="phone"> Téléphone</label>
+            <input type="text" id="phone" name="phone">
+            
+        
+    </fieldset>
+        
+        
+     <fieldset> 
+        <legend>Informations d'authentification</legend>
+        
+            <p id="email_error"></p>
+            <label for="email"> E-mail</label>
+            <input type="text" id="email" name="email">
+            
+            <p id="password_error"></p>
+            <label for="password"> Mot de passe</label>
+            <input type="text" name="password" id="password">
+     </fieldset>
+     <div class="btn">
+        <button> Envoyer </button>
+        <button> Annuler </button>
+    </div>
+</form>

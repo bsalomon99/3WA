@@ -1,0 +1,24 @@
+<h3> Se connecter avec un compte utilisateur</h3>
+
+<form action="" method="POST">
+    
+    <?php
+    
+        if( isset($error) == true)
+        {
+            echo "<p>$error</p>";
+            
+        }
+    ?>
+    <fieldset>
+        <legend>Informations d'authentification</legend>
+            
+                
+        <label for="email"> Email </label>
+        <input type="text" name="email" id="email">
+        <label for="password"> Password </label>
+        <input type="text" name="password" id="password">
+    </fieldset>    
+     <button class="btn2"> Connexion </button>
+     
+</form>

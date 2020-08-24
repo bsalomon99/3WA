@@ -1,0 +1,104 @@
+
+
+.mainContainer {
+    display: flex;
+	justify-content: center;
+	background-image: url(img/frosty-spirals.png);
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#canvas
+    {
+        margin: 50px;
+        background-color: white;
+        height: 600px; /*pour corriger le décalage, on met la height en dur */
+    }
+    
+.color
+    {
+        width: 50px;
+        height: 50px;
+        border-radius : 20%;
+        margin: 20px;
+        
+        
+    }
+    
+div.color:hover {
+    border: 3px solid #f58d42;
+}    
+.containerColor {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(184, 187, 202, 0.4);
+    height: 600px;
+    margin: 50px;
+    width: 200px;
+} 
+.size {
+    display: block;
+    width: 60px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 2;
+    background-color: grey;
+    color: white;
+    
+}
+#eraser {
+    background-color: blue;
+    margin-top: 20px;
+    line-height: 2;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    
+}
+.containerBtn {
+    display: flex;
+    flex-direction: column;
+    margin: 65px;
+    position: absolute;
+    right: 250px;
+}
+
+div:nth-of-type(1) {
+     background-color: #07f5f5;
+ }  
+div:nth-of-type(1):hover {
+     border: 3px solid #07f5f5;
+  }   
+ 
+ div:nth-of-type(2) {
+     background-color: #f20a0a;
+ } 
+ div:nth-of-type(2):hover {
+     border: 3px solid #f20a0a;
+     
+ }   
+  div:nth-of-type(3) {
+     background-color: yellow;
+ }
+ div:nth-of-type(3):hover {
+     border: 3px solid yellow;
+  } 
+ div:nth-of-type(4) {
+     background-color: orange;
+ }  
+ div:nth-of-type(4):hover {
+     border: 3px solid orange;
+  } 
+ div:nth-of-type(5) {
+     background-color: #67d952;
+ }
+ div:nth-of-type(5):hover {
+     border: 3px solid #67d952;
+  } 
+ div:nth-of-type(6) {
+     background-color: #f05b9c;
+ } 
+ div:nth-of-type(6):hover {
+     border: 3px solid #f05b9c;
+  } 

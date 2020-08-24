@@ -1,0 +1,36 @@
+.project-section {
+    float: left;
+}
+
+.project-section > span {
+    display: block;
+}
+
+[data-tooltip] {
+    position: relative;
+    border-bottom: 2px solid black;
+}
+
+[data-tooltip]:hover {
+    color: var(--color-bg-light);
+}
+
+[data-tooltip] > span.tooltip {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: 300px;
+    padding:15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background-color: var(--bg-dark);
+}
+
+[data-tooltip]:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+<ul class="list-unstyled grid has-gutter">
+    <?php foreach($movies as $movie): ?>
+
+    <li>
+        <img src="img/<?= $movie['cover'] ?>">
+        <p>
+            <strong><?= $movie['title'] ?></strong> - <em><?= $movie['duration'] ?> mn</em>
+        </p>
+    </li>
+
+    <?php endforeach; ?>
+    
+</ul>

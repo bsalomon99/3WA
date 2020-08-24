@@ -1,0 +1,54 @@
+<?php include 'includes/header.php'; ?>
+
+		<main>
+		    
+            <form method="POST" action="edit-article.php?id=<?= $article['id'] ?>">
+		   		
+	        	<fieldset>
+	            	<legend>
+	                	Modifier un article
+	                </legend>
+	                
+        	         <label for="title"> Titre : </label>
+        	         <input type="text" name="title" value="<?= htmlspecialchars($article['title']) ?>"/>
+        	         <label for="content"> Article </label>
+        			 <textarea name="content" id="content"><?= htmlspecialchars($article['content']) ?></textarea>
+
+        	     
+        	         <label for="author"> Auteur </label>
+        	         <select name="author" id="author">
+        				<?php foreach( $authors as $author): ?>
+            				<option value="<?= $author['id'] ?>"
+                    			<?php if ( $article['author_id'] == $author['id']) : ?>
+                        			selected="selected"
+                    		<?php endif; ?>>
+            					
+            	    		<?= $author['firstname'] ?> <?= $author['lastname'] ?>
+            				</option>
+            			<?php endforeach; ?>
+        			  </select>
+
+				        <label for="category"> Categorie </label>
+				        <select name="category" id="category">
+				        	<?php foreach( $categories as $category): ?>
+				            	<option value="<?= $category['id'] ?>"
+				            	    <?php if ( $article['category_id'] == $category['id']) : ?>
+				                        selected="selected"
+				                    <?php endif; ?>>
+				            		
+				            	    <?= $category['nom'] ?>
+				            	</option>
+				            <?php endforeach; ?>
+				        </select>
+				        
+                       <input type="hidden" name="article_id" value="<?= $article['id'] ?>" >
+                       
+                       <button> Enregistrer </button>
+	            </fieldset>    
+               
+            </form>    
+		   
+		  
+		</main>
+			
+<?php include 'includes/footer.php'; ?>	

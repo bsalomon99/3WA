@@ -1,0 +1,186 @@
+/*
+En version bureau, la grille s'étalle sur 80% du viewport en largeur et 100% en hauteur. Dit autrement, il ny a pas de colonnes vides sur les côtés.
+
+La goutière est de 4px;
+*/
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    background-color: #111;
+    color: white;
+}
+.container {
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 4px;
+    
+}
+*[id^="photo"]{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+#photo1 {
+    grid-area: 1 / 1 / 2 / 2;
+    
+}
+#photo2 {
+    grid-area: 1 / 2 / 2 / 3;
+    
+}
+
+#photo3 {
+    grid-area: 1 / 3 / 2 / 4;
+    
+}
+#photo4 {
+    grid-area: 1 / 4 / 2 / 5;
+    
+}
+#photo5 {
+    grid-area: 1 / 5 / 2 / 6;
+    
+}
+#photo6 {
+    grid-area: 1 / 6 / 2 / 7;
+    
+}
+#photo7 {
+    grid-area: 1 / 7 / 2 / 8;
+    
+}
+#photo8 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+#photo9 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+#photo10 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+#photo11 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+#space12 {
+    grid-area: 2 / 5 / 3 / 6;
+    background-color: #333;
+}
+#space13 {
+    grid-area: 2 / 6 / 3 / 7;
+    background-color: #666;
+}
+#space14 {
+    grid-area: 2 / 7 / 3 / 8;
+    background-color: #999;
+}
+h1 {
+    grid-area: 3 / 1 / 4 / 8;
+    font-size: 3em;
+    
+}
+h2 {
+    grid-area: 4 / 1 / 5 / 8;
+    font-size: 1.5em;
+}
+/* FORMAT TABLETTE */
+@media screen and (min-width: 450px) {
+    .container {
+        
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(7, 1fr);
+       }
+    
+    h1 {
+    grid-area: 3 / 1 / 4 / 5;
+    font-size: 4em;
+    
+    }
+    h2 {
+        grid-area: 3 / 5 / 4 / 8;
+        font-size: 1.5em;
+        padding-top: 20%;
+    }
+
+}
+/* FORMAT DESKTOP */
+@media screen and (min-width: 800px) {
+    
+    .container {
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: repeat(9, 1fr);
+        
+    }
+    
+    #photo1 {
+    grid-area: 1 / 5 / 3 / 6;
+    
+    }
+    #photo2 {
+        grid-area: 2 / 7 / 4 / 8;
+        
+    }
+    
+    #photo3 {
+        grid-area: 6 / 7 / 7 / 9;
+        
+    }
+    #photo4 {
+        grid-area: 3 / 8 / 5 / 9;
+        
+    }
+    #photo5 {
+        grid-area: 4 / 1 / 6 / 2;
+        
+    }
+    #photo6 {
+        grid-area: 4 / 6 / 6 / 8;
+        
+    }
+    #photo7 {
+        grid-area: 5 / 8 / 6 / 10;
+        
+    }
+    #photo8 {
+        grid-area: 3 / 2 / 7 / 6;
+    }
+    #photo9 {
+        grid-area: 7 / 4 / 9 / 6;
+    }
+    #photo10 {
+        grid-area: 7 / 7 / 9 / 8;
+    }
+    #photo11 {
+        grid-area: 8 / 6 / 10 / 7;
+    }
+    #space12 {
+        grid-area: 2 / 3 / 3 / 5;
+        background-color: #333;
+    }
+    #space13 {
+        grid-area: 6 / 6 / 8 / 7;
+        background-color: #666;
+    }
+    #space14 {
+        grid-area: 7 / 3 / 8 / 4;
+        background-color: #999;
+    }
+    h1 {
+        grid-area: 2 / 6 / 4 / 8;
+        font-size: 4em;
+    }
+    h2 {
+        grid-area: 7 / 8 / 8 / 10;
+        
+    }
+    
+}
+

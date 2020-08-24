@@ -1,0 +1,46 @@
+<html>
+
+<head></head>
+
+<body>
+    <canvas id="canvas" width="500" height="300" style="border:1px solid black"> </canvas>
+
+    <script>
+        /****
+         *  x = 0 , y = 0          x = 500 , y = 0
+         *  ----------------------
+         *  |                    |
+         *  |    x = 250 y = 150 |
+         *  |                    |
+         *  ----------------------
+         *  x = 0 , y = 300      x = 500 , y = 300
+         */
+
+        let canvas = document.getElementById("canvas");
+
+        let context = canvas.getContext("2d");
+
+        context.fillStyle = 'rgb(100,100,0)';
+        context.fillRect(20, 10, 150, 100);
+
+        context.beginPath();
+        context.strokeStyle = "blue";
+        context.lineWidth = 10
+
+        context.moveTo(50, 50);
+        context.lineTo(100, 100);
+        context.lineTo(250, 100);
+        context.stroke();
+        context.closePath();
+
+        context.beginPath();
+        context.strokeStyle = "purple";
+        context.lineWidth = 5
+        context.moveTo(300, 150);
+        context.lineTo(0, 0);
+        context.stroke();
+        context.closePath();
+    </script>
+</body>
+
+</html>
